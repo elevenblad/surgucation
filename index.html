@@ -12,7 +12,6 @@
     :root {
       --navy: #0a1628;
       --teal: #0ea5e9;
-      --teal-dark: #0284c7;
       --emerald: #10b981;
       --amber: #f59e0b;
       --rose: #f43f5e;
@@ -20,530 +19,80 @@
       --slate: #94a3b8;
       --white: #f8fafc;
     }
-
-    .reveal {
-      font-family: 'Inter', -apple-system, sans-serif;
-      font-size: 28px;
-      color: var(--white);
-    }
-
+    .reveal { font-family: 'Inter', -apple-system, sans-serif; font-size: 28px; color: var(--white); }
     .reveal .slides { text-align: left; }
-
-    .reveal .slides section {
-      padding: 40px 60px;
-      height: 100%;
-      box-sizing: border-box;
-    }
-
-    .reveal h1, .reveal h2, .reveal h3 {
-      font-family: 'Playfair Display', serif;
-      text-transform: none;
-      letter-spacing: -0.02em;
-      color: var(--white);
-    }
-
+    .reveal .slides section { padding: 40px 60px; height: 100%; box-sizing: border-box; }
+    .reveal h1, .reveal h2, .reveal h3 { font-family: 'Playfair Display', serif; text-transform: none; letter-spacing: -0.02em; color: var(--white); }
     .reveal h1 { font-size: 2.8em; font-weight: 900; line-height: 1.1; }
-    .reveal h2 { font-size: 1.8em; font-weight: 800; margin-bottom: 0.5em; }
-    .reveal h3 { font-size: 1.3em; font-weight: 700; color: var(--teal); margin-bottom: 0.4em; }
-
+    .reveal h2 { font-size: 1.7em; font-weight: 800; margin-bottom: 0.5em; }
+    .reveal h3 { font-size: 1.2em; font-weight: 700; color: var(--teal); margin-bottom: 0.4em; }
     .reveal p, .reveal li { line-height: 1.6; font-weight: 400; }
     .reveal ul { list-style: none; padding: 0; }
-    .reveal ul li { padding: 0.2em 0; padding-left: 1.5em; position: relative; }
-    .reveal ul li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.65em;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--teal);
-    }
-
-    /* Title slide */
-    .title-slide {
-      text-align: center !important;
-      display: flex !important;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: radial-gradient(ellipse at 30% 50%, rgba(14,165,233,0.15), transparent 70%),
-                  radial-gradient(ellipse at 70% 80%, rgba(139,92,246,0.1), transparent 60%);
-    }
-
-    .title-slide .subtitle {
-      font-size: 1.4em;
-      color: var(--teal);
-      font-weight: 600;
-      margin-top: 0.3em;
-      letter-spacing: 0.05em;
-    }
-
-    .title-slide .author {
-      font-size: 0.8em;
-      color: var(--slate);
-      margin-top: 2em;
-      font-weight: 400;
-    }
-
-    .title-slide .author strong {
-      color: var(--white);
-      font-weight: 600;
-      display: block;
-      font-size: 1.2em;
-      margin-bottom: 0.3em;
-    }
-
-    /* Section divider */
-    .section-divider {
-      text-align: center !important;
-      display: flex !important;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .section-divider h2 {
-      font-size: 2.5em;
-      background: linear-gradient(135deg, var(--teal), var(--purple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .section-divider .section-number {
-      font-size: 5em;
-      font-weight: 900;
-      opacity: 0.08;
-      position: absolute;
-      top: 10%;
-      right: 10%;
-      font-family: 'Playfair Display', serif;
-    }
-
-    /* Stat cards */
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 1em;
-    }
-
-    .stat-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 16px;
-      padding: 24px;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .stat-card:hover {
-      background: rgba(14,165,233,0.1);
-      border-color: var(--teal);
-      transform: translateY(-2px);
-    }
-
-    .stat-card .number {
-      font-size: 2.5em;
-      font-weight: 900;
-      background: linear-gradient(135deg, var(--teal), var(--emerald));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .stat-card .label {
-      font-size: 0.7em;
-      color: var(--slate);
-      margin-top: 0.3em;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    /* Two column layout */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin-top: 0.5em;
-    }
-
-    .three-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 20px;
-      margin-top: 0.5em;
-    }
-
-    /* Info box */
-    .info-box {
-      background: rgba(14,165,233,0.1);
-      border-left: 4px solid var(--teal);
-      border-radius: 0 12px 12px 0;
-      padding: 16px 20px;
-      margin: 0.8em 0;
-      font-size: 0.85em;
-    }
-
-    .warning-box {
-      background: rgba(244,63,94,0.1);
-      border-left: 4px solid var(--rose);
-      border-radius: 0 12px 12px 0;
-      padding: 16px 20px;
-      margin: 0.8em 0;
-      font-size: 0.85em;
-    }
-
-    .pearl-box {
-      background: rgba(245,158,11,0.1);
-      border-left: 4px solid var(--amber);
-      border-radius: 0 12px 12px 0;
-      padding: 16px 20px;
-      margin: 0.8em 0;
-      font-size: 0.85em;
-    }
-
-    /* Tags/pills */
-    .tag {
-      display: inline-block;
-      padding: 4px 14px;
-      border-radius: 20px;
-      font-size: 0.65em;
-      font-weight: 600;
-      margin: 2px;
-    }
-
+    .reveal ul li { padding: 0.15em 0; padding-left: 1.5em; position: relative; font-size: 0.9em; }
+    .reveal ul li::before { content: ''; position: absolute; left: 0; top: 0.65em; width: 7px; height: 7px; border-radius: 50%; background: var(--teal); }
+    .title-slide { text-align: center !important; display: flex !important; flex-direction: column; justify-content: center; align-items: center; }
+    .title-slide .subtitle { font-size: 1.4em; color: var(--teal); font-weight: 600; margin-top: 0.3em; }
+    .title-slide .author { font-size: 0.8em; color: var(--slate); margin-top: 2em; }
+    .title-slide .author strong { color: var(--white); font-weight: 600; display: block; font-size: 1.2em; margin-bottom: 0.3em; }
+    .section-divider { text-align: center !important; display: flex !important; flex-direction: column; justify-content: center; align-items: center; }
+    .section-divider h2 { font-size: 2.5em; background: linear-gradient(135deg, var(--teal), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .tag { display: inline-block; padding: 4px 14px; border-radius: 20px; font-size: 0.65em; font-weight: 600; margin: 2px; }
     .tag-teal { background: rgba(14,165,233,0.2); color: var(--teal); }
     .tag-emerald { background: rgba(16,185,129,0.2); color: var(--emerald); }
     .tag-amber { background: rgba(245,158,11,0.2); color: var(--amber); }
     .tag-rose { background: rgba(244,63,94,0.2); color: var(--rose); }
     .tag-purple { background: rgba(139,92,246,0.2); color: var(--purple); }
-
-    /* Table styling */
-    .reveal table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.7em;
-      margin-top: 0.5em;
-    }
-
-    .reveal table th {
-      background: rgba(14,165,233,0.2);
-      color: var(--teal);
-      padding: 10px 14px;
-      text-align: left;
-      font-weight: 700;
-      border-bottom: 2px solid var(--teal);
-    }
-
-    .reveal table td {
-      padding: 8px 14px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .reveal table tr:hover td {
-      background: rgba(255,255,255,0.03);
-    }
-
-    /* Staging visual */
-    .stage-flow {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin: 0.5em 0;
-      flex-wrap: wrap;
-    }
-
-    .stage-box {
-      background: rgba(14,165,233,0.15);
-      border: 1px solid rgba(14,165,233,0.3);
-      border-radius: 12px;
-      padding: 12px 20px;
-      text-align: center;
-      min-width: 100px;
-      flex: 1;
-    }
-
-    .stage-box.active {
-      background: rgba(14,165,233,0.3);
-      border-color: var(--teal);
-    }
-
-    .stage-box .stage-num {
-      font-size: 1.8em;
-      font-weight: 900;
-      color: var(--teal);
-    }
-
-    .stage-box .stage-desc {
-      font-size: 0.6em;
-      color: var(--slate);
-      margin-top: 0.2em;
-    }
-
-    .stage-arrow {
-      color: var(--teal);
-      font-size: 1.2em;
-    }
-
-    /* Quiz styles */
-    .quiz-container {
-      background: rgba(139,92,246,0.05);
-      border: 1px solid rgba(139,92,246,0.2);
-      border-radius: 20px;
-      padding: 30px;
-      margin-top: 0.5em;
-    }
-
-    .quiz-question {
-      font-size: 1em;
-      font-weight: 600;
-      margin-bottom: 1em;
-      color: var(--white);
-    }
-
-    .quiz-options {
-      display: grid;
-      gap: 12px;
-    }
-
-    .quiz-option {
-      background: rgba(255,255,255,0.05);
-      border: 2px solid rgba(255,255,255,0.1);
-      border-radius: 12px;
-      padding: 14px 20px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-size: 0.85em;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .quiz-option:hover {
-      background: rgba(139,92,246,0.1);
-      border-color: var(--purple);
-    }
-
-    .quiz-option.correct {
-      background: rgba(16,185,129,0.2) !important;
-      border-color: var(--emerald) !important;
-    }
-
-    .quiz-option.incorrect {
-      background: rgba(244,63,94,0.15) !important;
-      border-color: var(--rose) !important;
-    }
-
-    .quiz-option .option-letter {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.85em;
-      flex-shrink: 0;
-    }
-
-    .quiz-feedback {
-      margin-top: 1em;
-      padding: 14px 20px;
-      border-radius: 12px;
-      font-size: 0.85em;
-      display: none;
-    }
-
-    .quiz-feedback.show { display: block; }
-    .quiz-feedback.correct-fb {
-      background: rgba(16,185,129,0.15);
-      border: 1px solid var(--emerald);
-      color: var(--emerald);
-    }
-    .quiz-feedback.incorrect-fb {
-      background: rgba(244,63,94,0.1);
-      border: 1px solid var(--rose);
-      color: var(--rose);
-    }
-
-    /* Comparison highlight */
-    .vs-container {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 20px;
-      align-items: center;
-      margin-top: 0.5em;
-    }
-
-    .vs-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 16px;
-      padding: 20px;
-    }
-
-    .vs-divider {
-      font-size: 1.5em;
-      font-weight: 900;
-      color: var(--amber);
-      text-align: center;
-    }
-
-    /* Timeline */
-    .timeline {
-      position: relative;
-      margin: 1em 0;
-      padding-left: 30px;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 8px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--teal), var(--purple));
-    }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 1em;
-      padding-left: 20px;
-    }
-
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -26px;
-      top: 6px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--teal);
-      border: 2px solid var(--navy);
-    }
-
-    .timeline-item .timeline-title {
-      font-weight: 700;
-      color: var(--teal);
-      font-size: 0.9em;
-    }
-
-    .timeline-item .timeline-desc {
-      font-size: 0.75em;
-      color: var(--slate);
-    }
-
-    /* Progress bar */
-    .score-bar {
-      width: 100%;
-      height: 12px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 6px;
-      overflow: hidden;
-      margin-top: 0.5em;
-    }
-
-    .score-bar-fill {
-      height: 100%;
-      border-radius: 6px;
-      transition: width 1s ease;
-    }
-
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 0.5em; }
+    .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 0.5em; }
+    .info-box { background: rgba(14,165,233,0.1); border-left: 4px solid var(--teal); border-radius: 0 12px 12px 0; padding: 14px 18px; margin: 0.6em 0; font-size: 0.85em; }
+    .warning-box { background: rgba(244,63,94,0.1); border-left: 4px solid var(--rose); border-radius: 0 12px 12px 0; padding: 14px 18px; margin: 0.6em 0; font-size: 0.85em; }
+    .pearl-box { background: rgba(245,158,11,0.1); border-left: 4px solid var(--amber); border-radius: 0 12px 12px 0; padding: 14px 18px; margin: 0.6em 0; font-size: 0.85em; }
+    .stat-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px; text-align: center; }
+    .stat-card .number { font-size: 2.5em; font-weight: 900; background: linear-gradient(135deg, var(--teal), var(--emerald)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .stat-card .label { font-size: 0.7em; color: var(--slate); margin-top: 0.3em; text-transform: uppercase; letter-spacing: 0.1em; }
+    .reveal table { width: 100%; border-collapse: collapse; font-size: 0.7em; margin-top: 0.5em; }
+    .reveal table th { background: rgba(14,165,233,0.2); color: var(--teal); padding: 8px 12px; text-align: left; font-weight: 700; border-bottom: 2px solid var(--teal); }
+    .reveal table td { padding: 6px 12px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .score-bar { width: 100%; height: 10px; background: rgba(255,255,255,0.1); border-radius: 5px; overflow: hidden; margin-top: 0.3em; }
+    .score-bar-fill { height: 100%; border-radius: 5px; transition: width 1s ease; }
     .score-bar-fill.excellent { background: linear-gradient(90deg, var(--emerald), var(--teal)); }
     .score-bar-fill.good { background: linear-gradient(90deg, var(--amber), var(--emerald)); }
     .score-bar-fill.poor { background: linear-gradient(90deg, var(--rose), var(--amber)); }
-
-    /* Image slides */
-    .img-container {
-      text-align: center;
-      margin-top: 0.5em;
-    }
-
-    .img-container img {
-      max-width: 90%;
-      max-height: 55vh;
-      border-radius: 12px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    }
-
-    /* Floating badge */
-    .badge {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: rgba(14,165,233,0.15);
-      border: 1px solid rgba(14,165,233,0.3);
-      border-radius: 20px;
-      padding: 6px 16px;
-      font-size: 0.55em;
-      color: var(--teal);
-      font-weight: 600;
-    }
-
-    /* Key pearl icon */
-    .key-icon { color: var(--amber); margin-right: 6px; }
-    .danger-icon { color: var(--rose); margin-right: 6px; }
-
-    /* Slide background gradient */
-    .reveal .slides section[data-background-gradient] {
-      color: var(--white);
-    }
-
-    /* Override reveal defaults */
-    .reveal .slide-background { background: var(--navy); }
-    .reveal .progress { height: 4px; }
-    .reveal .progress span { background: linear-gradient(90deg, var(--teal), var(--purple)); }
-    .reveal .controls .controls-arrow { color: var(--teal); }
-
-    /* Fragment animations */
-    .reveal .fragment.grow-in {
-      opacity: 0;
-      transform: scale(0.8);
-      transition: all 0.5s ease;
-    }
-    .reveal .fragment.grow-in.visible {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    /* Small text helper */
+    /* Quiz styles */
+    .quiz-container { background: rgba(139,92,246,0.05); border: 1px solid rgba(139,92,246,0.2); border-radius: 20px; padding: 28px; margin-top: 0.3em; }
+    .quiz-question { font-size: 1.05em; font-weight: 600; margin-bottom: 0.8em; color: var(--white); line-height: 1.5; }
+    .quiz-options { display: grid; gap: 10px; }
+    .quiz-option { background: rgba(255,255,255,0.05); border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px 18px; cursor: pointer; transition: all 0.3s ease; font-size: 0.82em; display: flex; align-items: center; gap: 12px; }
+    .quiz-option:hover { background: rgba(139,92,246,0.1); border-color: var(--purple); }
+    .quiz-option.correct { background: rgba(16,185,129,0.2) !important; border-color: var(--emerald) !important; }
+    .quiz-option.incorrect { background: rgba(244,63,94,0.15) !important; border-color: var(--rose) !important; }
+    .quiz-option .option-letter { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85em; flex-shrink: 0; }
+    .quiz-feedback { margin-top: 0.8em; padding: 12px 18px; border-radius: 12px; font-size: 0.8em; display: none; }
+    .quiz-feedback.show { display: block; }
+    .quiz-feedback.correct-fb { background: rgba(16,185,129,0.15); border: 1px solid var(--emerald); color: var(--emerald); }
+    .quiz-feedback.incorrect-fb { background: rgba(244,63,94,0.1); border: 1px solid var(--rose); color: var(--rose); }
+    .img-container { text-align: center; margin-top: 0.5em; }
+    .img-container img { max-width: 90%; max-height: 55vh; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
     .small { font-size: 0.75em; }
     .tiny { font-size: 0.6em; color: var(--slate); }
-    .center { text-align: center; }
     .highlight { color: var(--teal); font-weight: 700; }
     .highlight-amber { color: var(--amber); font-weight: 700; }
     .highlight-rose { color: var(--rose); font-weight: 700; }
     .highlight-emerald { color: var(--emerald); font-weight: 700; }
-
-    /* Score tracker */
-    #score-tracker {
-      position: fixed;
-      bottom: 60px;
-      right: 20px;
-      background: rgba(10,22,40,0.9);
-      border: 1px solid rgba(139,92,246,0.3);
-      border-radius: 12px;
-      padding: 8px 16px;
-      font-size: 14px;
-      color: var(--purple);
-      font-weight: 600;
-      z-index: 100;
-      display: none;
-      backdrop-filter: blur(10px);
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .stat-grid, .two-col, .three-col { grid-template-columns: 1fr; }
-      .vs-container { grid-template-columns: 1fr; }
-      .reveal h1 { font-size: 1.8em; }
-      .reveal .slides section { padding: 20px 30px; }
-    }
+    .key-icon { color: var(--amber); margin-right: 6px; }
+    .danger-icon { color: var(--rose); margin-right: 6px; }
+    .reveal .slide-background { background: var(--navy); }
+    .reveal .progress { height: 4px; }
+    .reveal .progress span { background: linear-gradient(90deg, var(--teal), var(--purple)); }
+    .reveal .controls .controls-arrow { color: var(--teal); }
+    #score-tracker { position: fixed; bottom: 60px; right: 20px; background: rgba(10,22,40,0.9); border: 1px solid rgba(139,92,246,0.3); border-radius: 12px; padding: 8px 16px; font-size: 14px; color: var(--purple); font-weight: 600; z-index: 100; backdrop-filter: blur(10px); }
+    .badge { position: absolute; top: 20px; right: 20px; background: rgba(14,165,233,0.15); border: 1px solid rgba(14,165,233,0.3); border-radius: 20px; padding: 6px 16px; font-size: 0.55em; color: var(--teal); font-weight: 600; }
+    .stage-flow { display: flex; align-items: center; gap: 6px; margin: 0.5em 0; flex-wrap: wrap; }
+    .stage-box { background: rgba(14,165,233,0.15); border: 1px solid rgba(14,165,233,0.3); border-radius: 12px; padding: 10px 16px; text-align: center; min-width: 90px; flex: 1; }
+    .stage-box .stage-num { font-size: 1.6em; font-weight: 900; color: var(--teal); }
+    .stage-box .stage-desc { font-size: 0.55em; color: var(--slate); margin-top: 0.2em; }
+    .stage-arrow { color: var(--teal); font-size: 1em; }
+    @media (max-width: 768px) { .two-col, .three-col { grid-template-columns: 1fr; } .reveal h1 { font-size: 1.8em; } .reveal .slides section { padding: 20px 30px; } }
   </style>
 </head>
 <body>
@@ -552,1422 +101,710 @@
   <div class="reveal">
     <div class="slides">
 
-      <!-- ============ TITLE SLIDE ============ -->
+      <!-- ===== TITLE ===== -->
       <section class="title-slide" data-background-gradient="radial-gradient(ellipse at center, #0f2744, #0a1628)">
-        <div style="margin-bottom: 0.5em;">
-          <span class="tag tag-teal"><i class="fas fa-graduation-cap"></i> SURGICAL EDUCATION</span>
-        </div>
+        <span class="tag tag-teal"><i class="fas fa-graduation-cap"></i> INTERACTIVE SURGICAL EDUCATION</span>
         <h1>Pediatric Renal Masses</h1>
-        <div class="subtitle">A Comprehensive Surgical Review</div>
+        <div class="subtitle">A Question-Driven Review</div>
         <div class="author">
           <strong>Mikael Petrosyan, MD, MBA, FACS, FAAP</strong>
           Division Chief, General &amp; Thoracic Surgery<br>
           Children's National Hospital | George Washington University<br>
           <span style="color:var(--teal)">Surgucation</span>
         </div>
-        <div class="tiny" style="margin-top:2em; color:var(--slate);">
-          <i class="fas fa-keyboard"></i> Use arrow keys or swipe to navigate &nbsp;|&nbsp;
-          <i class="fas fa-expand"></i> Press F for fullscreen
+        <div class="tiny" style="margin-top:1.5em">
+          <i class="fas fa-keyboard"></i> Arrow keys to navigate &nbsp;|&nbsp; <i class="fas fa-expand"></i> F for fullscreen &nbsp;|&nbsp; <i class="fas fa-sticky-note"></i> S for speaker notes
         </div>
+        <aside class="notes">Welcome. This is an interactive, question-driven review of pediatric renal masses. Instead of a traditional lecture, we'll work through clinical scenarios and questions together. You'll answer first, then we'll discuss the teaching points. Stay engaged — there will be scoring at the end! Press S to see speaker notes throughout.</aside>
       </section>
 
-      <!-- ============ LEARNING OBJECTIVES ============ -->
-      <section>
-        <h2><i class="fas fa-bullseye" style="color:var(--teal)"></i> Learning Objectives</h2>
-        <ul>
-          <li class="fragment">Classify pediatric renal masses by age, histology, and behavior</li>
-          <li class="fragment">Apply COG and SIOP staging systems for Wilms tumor</li>
-          <li class="fragment">Select appropriate surgical approach: radical nephrectomy vs. nephron-sparing surgery</li>
-          <li class="fragment">Integrate molecular biomarkers into risk stratification and treatment planning</li>
-          <li class="fragment">Differentiate Wilms tumor from RCC, CMN, clear cell sarcoma, and rhabdoid tumor</li>
-          <li class="fragment">Recognize long-term sequelae and surveillance needs for survivors</li>
-        </ul>
-      </section>
-
-      <!-- ============ THE BIG PICTURE ============ -->
-      <section>
-        <h2>Pediatric Renal Tumors: The Big Picture</h2>
-        <div class="stat-grid">
-          <div class="stat-card fragment">
-            <div class="number">5%</div>
-            <div class="label">of all childhood cancers</div>
-          </div>
-          <div class="stat-card fragment">
-            <div class="number">500+</div>
-            <div class="label">new cases/year in US</div>
-          </div>
-          <div class="stat-card fragment">
-            <div class="number">>90%</div>
-            <div class="label">5-year survival (WT)</div>
+      <!-- ===== FORMAT INTRO ===== -->
+      <section style="text-align:center; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+        <h2>How This Works</h2>
+        <div style="max-width:700px; text-align:left; margin-top:1em">
+          <div class="info-box"><i class="fas fa-question-circle" style="color:var(--purple)"></i> <strong>Step 1:</strong> A clinical question appears — think through your answer</div>
+          <div class="pearl-box"><i class="fas fa-mouse-pointer" style="color:var(--amber)"></i> <strong>Step 2:</strong> Click your answer to see if you're right</div>
+          <div class="info-box"><i class="fas fa-book-open" style="color:var(--teal)"></i> <strong>Step 3:</strong> Teaching content follows — deep dive into the topic</div>
+          <div style="text-align:center; margin-top:1.5em; font-size:0.9em; color:var(--slate)">
+            <i class="fas fa-redo"></i> &nbsp;This cycle repeats throughout the presentation.<br>
+            <strong style="color:var(--purple)">Your score is tracked — see how you do!</strong>
           </div>
         </div>
-        <div class="info-box fragment" style="margin-top:1.5em">
-          <i class="fas fa-lightbulb key-icon"></i>
-          <strong>Key Concept:</strong> The "Big Three" pediatric renal tumors &mdash; Wilms Tumor, Congenital Mesoblastic Nephroma, and Renal Cell Carcinoma &mdash; differ fundamentally in age, biology, and management.
-        </div>
+        <aside class="notes">Explain the format: each section starts with a clinical question, then reveals the answer and teaching content. This keeps the audience engaged and thinking rather than passively listening. Encourage them to commit to an answer before clicking.</aside>
       </section>
 
-      <!-- ============ CLASSIFICATION OVERVIEW ============ -->
+      <!-- ========================================== -->
+      <!-- BLOCK 1: What is the most common pediatric renal tumor? -->
+      <!-- ========================================== -->
       <section>
-        <h2>Classification by Age</h2>
+        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Question 1</h2>
+        <div class="quiz-container" id="q1">
+          <div class="quiz-question">A 3-year-old healthy-appearing girl is found to have a firm, non-tender abdominal mass during a bath. CT shows a large intrarenal mass with a "claw sign" and no calcification. What is the most likely diagnosis?</div>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q1')"><div class="option-letter">A</div><div>Neuroblastoma</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, true, 'q1')"><div class="option-letter">B</div><div>Wilms tumor (nephroblastoma)</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q1')"><div class="option-letter">C</div><div>Congenital mesoblastic nephroma</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q1')"><div class="option-letter">D</div><div>Renal cell carcinoma</div></div>
+          </div>
+          <div class="quiz-feedback" id="q1-feedback"></div>
+        </div>
+        <aside class="notes">Classic board question. Healthy child + painless abdominal mass + claw sign + no calcification = Wilms tumor. Neuroblastoma children are ill-appearing with 60-70% calcification. CMN presents in infants under 3 months. RCC is in adolescents 9-15 years. Give them time to think before revealing.</aside>
+      </section>
+
+      <!-- TEACH 1: Wilms Tumor Overview + Big Picture -->
+      <section>
+        <h2>Wilms Tumor: The Big Picture</h2>
         <div class="three-col">
-          <div class="stat-card fragment" style="border-color: rgba(16,185,129,0.3)">
-            <div style="font-size:2em; margin-bottom:0.2em"><i class="fas fa-baby" style="color:var(--emerald)"></i></div>
-            <div style="font-weight:800; color:var(--emerald)">Infants (&lt;1 yr)</div>
+          <div class="stat-card"><div class="number">>90%</div><div class="label">of pediatric renal tumors</div></div>
+          <div class="stat-card"><div class="number">3 yrs</div><div class="label">median age at diagnosis</div></div>
+          <div class="stat-card"><div class="number">>90%</div><div class="label">5-year overall survival</div></div>
+        </div>
+        <div class="pearl-box" style="margin-top:1em">
+          <i class="fas fa-gem key-icon"></i> <strong>Classic Scenario:</strong> A <span class="highlight-amber">healthy-appearing child</span> with an incidentally discovered, firm, smooth, non-tender abdominal mass found during bathing. This is the #1 way WT presents (83%).
+        </div>
+        <div class="warning-box">
+          <i class="fas fa-exchange-alt danger-icon"></i> <strong>WT vs Neuroblastoma:</strong>
+          WT = healthy child, 5-10% calcification, intrarenal "claw sign" &nbsp;|&nbsp;
+          NB = ill child, 60-70% calcification, adrenal/paraspinal, crosses midline
+        </div>
+        <aside class="notes">Key teaching: Wilms tumor is 90%+ of pediatric renal tumors. 500-600 new US cases/year. Incidence 5.7 per million children, highest in African Americans (7.1/M). 75%+ present ages 1-5. Additional symptoms: abdominal pain 37%, fever 23%, hematuria 25%, hypertension 25%. ~10% have acquired von Willebrand disease — always check coags. Don't forget urine catecholamines (HVA/VMA) to rule out neuroblastoma.</aside>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- BLOCK 2: Age-Based Classification -->
+      <!-- ========================================== -->
+      <section>
+        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Question 2</h2>
+        <div class="quiz-container" id="q2">
+          <div class="quiz-question">A 2-month-old boy presents with a palpable abdominal mass. Ultrasound reveals a solid renal tumor. What is the most likely diagnosis?</div>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q2')"><div class="option-letter">A</div><div>Wilms tumor</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, true, 'q2')"><div class="option-letter">B</div><div>Congenital mesoblastic nephroma</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q2')"><div class="option-letter">C</div><div>Clear cell sarcoma of the kidney</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q2')"><div class="option-letter">D</div><div>Renal cell carcinoma</div></div>
+          </div>
+          <div class="quiz-feedback" id="q2-feedback"></div>
+        </div>
+        <aside class="notes">Age is your #1 filter. A 2-month-old = think CMN first. CMN is the most common renal tumor in infants under 3 months with a median age of 1 month. Wilms peaks at 1-5 years, CCSK at 2-4 years, RCC at 9-15 years.</aside>
+      </section>
+
+      <!-- TEACH 2: Age-Based Classification -->
+      <section>
+        <h2>Age Is Your First Filter</h2>
+        <div class="three-col">
+          <div class="stat-card" style="border-color: rgba(16,185,129,0.3)">
+            <div style="font-size:1.8em"><i class="fas fa-baby" style="color:var(--emerald)"></i></div>
+            <div style="font-weight:800; color:var(--emerald)">Neonates (&lt;3 mo)</div>
             <div class="small" style="margin-top:0.5em; text-align:left">
-              <strong>CMN</strong> &mdash; #1 in neonates<br>
-              Median: 1 month<br>
-              <span class="tag tag-emerald">Classic</span>
-              <span class="tag tag-emerald">Cellular</span>
-              <span class="tag tag-emerald">Mixed</span>
+              <strong>CMN</strong> — #1 renal tumor<br>Median: 1 month<br>Male 2:1<br>
+              <span class="tag tag-emerald">Classic</span> <span class="tag tag-emerald">Cellular</span> <span class="tag tag-emerald">Mixed</span>
             </div>
           </div>
-          <div class="stat-card fragment" style="border-color: rgba(14,165,233,0.3)">
-            <div style="font-size:2em; margin-bottom:0.2em"><i class="fas fa-child" style="color:var(--teal)"></i></div>
+          <div class="stat-card" style="border-color: rgba(14,165,233,0.3)">
+            <div style="font-size:1.8em"><i class="fas fa-child" style="color:var(--teal)"></i></div>
             <div style="font-weight:800; color:var(--teal)">Children (1&ndash;5 yrs)</div>
             <div class="small" style="margin-top:0.5em; text-align:left">
-              <strong>Wilms Tumor</strong> &mdash; 90%+ of renal tumors<br>
-              Median: 3 years<br>
-              <span class="tag tag-teal">Favorable</span>
-              <span class="tag tag-rose">Anaplastic</span>
+              <strong>Wilms Tumor</strong> — 90%+<br>Median: 3 years<br>
+              <span class="tag tag-teal">FHWT</span> <span class="tag tag-rose">Anaplastic</span><br>
+              Also: CCSK (2-4yr), MRTK (&lt;1yr)
             </div>
           </div>
-          <div class="stat-card fragment" style="border-color: rgba(139,92,246,0.3)">
-            <div style="font-size:2em; margin-bottom:0.2em"><i class="fas fa-user" style="color:var(--purple)"></i></div>
+          <div class="stat-card" style="border-color: rgba(139,92,246,0.3)">
+            <div style="font-size:1.8em"><i class="fas fa-user" style="color:var(--purple)"></i></div>
             <div style="font-weight:800; color:var(--purple)">Adolescents (9&ndash;15 yrs)</div>
             <div class="small" style="margin-top:0.5em; text-align:left">
-              <strong>RCC</strong> &mdash; 2&ndash;6% of renal tumors<br>
-              Mean: 9&ndash;15 years<br>
-              <span class="tag tag-purple">MiT-RCC</span>
-              <span class="tag tag-purple">Papillary</span>
+              <strong>RCC</strong> — 2-6% of renal tumors<br>
+              <span class="tag tag-purple">MiT-RCC (36-56%)</span><br>
+              <span class="tag tag-purple">Papillary</span> <span class="tag tag-purple">Clear cell</span>
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- ============ INFOGRAPHIC: COMPARISON ============ -->
-      <section>
-        <h2>Clinical Comparison at a Glance</h2>
-        <div class="img-container">
-          <img src="assets/img/clinical-comparison.png" alt="Pediatric Renal Masses: A Comparative Guide to Wilms Tumor, RCC, and CMN">
+        <div class="img-container" style="margin-top:0.8em">
+          <img src="assets/img/clinical-comparison.png" alt="Pediatric Renal Masses Comparison" style="max-height:32vh">
         </div>
+        <aside class="notes">Emphasize: always think about age first. Neonates = CMN, Toddlers = Wilms, Adolescents = RCC. But also remember the rare but deadly ones: rhabdoid tumor peaks under 1 year, and clear cell sarcoma peaks at 2-4 years. CMN subtypes: Classic 45% (EGFR ITD, 0% recurrence), Cellular 21% (ETV6-NTRK3 fusion, higher recurrence), Mixed 29%. CMN overall survival 96-100%.</aside>
       </section>
 
-      <!-- ============ SECTION: WILMS TUMOR ============ -->
-      <section class="section-divider" data-background-gradient="radial-gradient(ellipse at center, #0f2744, #0a1628)">
-        <div class="section-number">01</div>
-        <span class="tag tag-teal" style="margin-bottom:0.5em">MOST COMMON PEDIATRIC RENAL TUMOR</span>
-        <h2>Wilms Tumor<br><span style="font-size:0.5em; color:var(--slate)">Nephroblastoma</span></h2>
-      </section>
-
-      <!-- WT: Epidemiology -->
+      <!-- ========================================== -->
+      <!-- BLOCK 3: Genetic Syndromes -->
+      <!-- ========================================== -->
       <section>
-        <h2>Wilms Tumor: Epidemiology</h2>
-        <div class="badge"><i class="fas fa-chart-bar"></i> NCCN v2.2025</div>
+        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Question 3</h2>
+        <div class="quiz-container" id="q3">
+          <div class="quiz-question">A child with WAGR syndrome is being followed with surveillance. How often should screening ultrasounds be performed, and until what age?</div>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q3')"><div class="option-letter">A</div><div>Every 6 months until age 5</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, true, 'q3')"><div class="option-letter">B</div><div>Every 3 months until age 7</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q3')"><div class="option-letter">C</div><div>Every 12 months until age 10</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q3')"><div class="option-letter">D</div><div>Every 3 months until age 4</div></div>
+          </div>
+          <div class="quiz-feedback" id="q3-feedback"></div>
+        </div>
+        <aside class="notes">Per NCCN guidelines: Q3 months physical exam + renal US until age 7 for all high-risk syndromes. Rationale: 90-98% of Wilms in syndromic patients occurs by age 7. In WAGR specifically, 90% by age 4 and 98% by age 7, leaving only 1% residual risk after age 7.</aside>
+      </section>
+
+      <!-- TEACH 3: Genetic Predisposition -->
+      <section>
+        <h2>Genetic Predisposition (10&ndash;33% of WT)</h2>
         <div class="two-col">
           <div>
-            <ul class="small">
-              <li><span class="highlight">90%+</span> of renal tumors in patients &lt;20 years</li>
-              <li>Incidence: <span class="highlight">5.7 per million</span> children</li>
-              <li>~500&ndash;600 new US cases annually</li>
-              <li>75%+ present between ages <strong>1&ndash;5 years</strong></li>
-              <li>Median age: <strong>3 years</strong></li>
-            </ul>
-            <div class="pearl-box fragment">
-              <i class="fas fa-gem key-icon"></i> <strong>Surgical Pearl:</strong> Unilateral median age 35mo (M) / 42mo (F). Bilateral presents earlier: 23mo (M) / 28.5mo (F).
-            </div>
-          </div>
-          <div>
-            <h3>Racial Disparities</h3>
-            <div style="font-size:0.8em">
-              <div style="display:flex; align-items:center; gap:10px; margin:0.3em 0">
-                <div style="flex:1">African American</div>
-                <div class="score-bar" style="flex:2"><div class="score-bar-fill excellent" style="width:85%"></div></div>
-                <div style="color:var(--teal); font-weight:700">7.1/M</div>
-              </div>
-              <div style="display:flex; align-items:center; gap:10px; margin:0.3em 0">
-                <div style="flex:1">White</div>
-                <div class="score-bar" style="flex:2"><div class="score-bar-fill excellent" style="width:68%"></div></div>
-                <div style="color:var(--teal); font-weight:700">5.7/M</div>
-              </div>
-              <div style="display:flex; align-items:center; gap:10px; margin:0.3em 0">
-                <div style="flex:1">Asian</div>
-                <div class="score-bar" style="flex:2"><div class="score-bar-fill excellent" style="width:52%"></div></div>
-                <div style="color:var(--teal); font-weight:700">4.4/M</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- WT: Genetics & Syndromes -->
-      <section>
-        <h2>Genetic Predisposition</h2>
-        <p class="small" style="color:var(--slate)">Present in <span class="highlight">10&ndash;33%</span> of Wilms tumor cases</p>
-        <div class="two-col">
-          <div>
-            <h3><i class="fas fa-exclamation-triangle" style="color:var(--rose)"></i> High-Risk Syndromes</h3>
+            <h3 class="highlight-rose"><i class="fas fa-exclamation-triangle"></i> High-Risk Syndromes</h3>
             <table>
-              <thead><tr><th>Syndrome</th><th>WT Risk</th><th>Features</th></tr></thead>
+              <thead><tr><th>Syndrome</th><th>WT Risk</th><th>Key Features</th></tr></thead>
               <tbody>
-                <tr class="fragment"><td><strong>WAGR</strong></td><td class="highlight-rose">45&ndash;60%</td><td><small>Wilms, Aniridia, GU abnormalities, intellectual disability</small></td></tr>
-                <tr class="fragment"><td><strong>Denys-Drash</strong></td><td class="highlight-rose">~90%</td><td><small>DSD, mesangial sclerosis, renal failure</small></td></tr>
-                <tr class="fragment"><td><strong>Perlman</strong></td><td class="highlight-rose">High</td><td><small>Overgrowth, organomegaly, characteristic facies</small></td></tr>
+                <tr><td><strong>WAGR</strong></td><td class="highlight-rose">45&ndash;60%</td><td><small>Wilms, Aniridia, GU anomalies, intellectual disability</small></td></tr>
+                <tr><td><strong>Denys-Drash</strong></td><td class="highlight-rose">~90%</td><td><small>DSD, mesangial sclerosis, renal failure</small></td></tr>
+                <tr><td><strong>Perlman</strong></td><td class="highlight-rose">High</td><td><small>Overgrowth, organomegaly, characteristic facies</small></td></tr>
               </tbody>
             </table>
-          </div>
-          <div>
-            <h3><i class="fas fa-exclamation-circle" style="color:var(--amber)"></i> Moderate-Risk</h3>
+            <h3 style="margin-top:0.8em" class="highlight-amber"><i class="fas fa-exclamation-circle"></i> Moderate-Risk</h3>
             <table>
               <thead><tr><th>Syndrome</th><th>Features</th></tr></thead>
               <tbody>
-                <tr class="fragment"><td><strong>Beckwith-Wiedemann</strong></td><td><small>Macroglossia, hemihyperplasia, gigantism (~5% of WT)</small></td></tr>
-                <tr class="fragment"><td><strong>Frasier</strong></td><td><small>GU abnormalities, FSGS</small></td></tr>
-                <tr class="fragment"><td><strong>Li-Fraumeni</strong></td><td><small>TP53 mutations, multiple cancers</small></td></tr>
+                <tr><td><strong>Beckwith-Wiedemann</strong></td><td><small>Macroglossia, hemihyperplasia (~5% of WT)</small></td></tr>
+                <tr><td><strong>Frasier / Li-Fraumeni</strong></td><td><small>WT1 splice site / TP53 mutations</small></td></tr>
               </tbody>
             </table>
           </div>
+          <div>
+            <div class="warning-box">
+              <strong>Screening Protocol (NCCN v2.2025):</strong><br>
+              Physical exam + renal US <strong>every 3 months until age 7</strong><br>
+              <small>Rationale: 90&ndash;98% of syndromic WT occurs by age 7</small>
+            </div>
+            <div class="pearl-box">
+              <i class="fas fa-gem key-icon"></i> <strong>Any child with aniridia</strong> &rarr; check for WT1 deletion at 11p13 &rarr; WAGR syndrome
+            </div>
+            <div class="info-box">
+              <strong>Key Genetics:</strong><br>
+              WT1 (11p13) &mdash; WAGR, Denys-Drash<br>
+              WT2/11p15 (IGF2) &mdash; Beckwith-Wiedemann<br>
+              CTNNB1 (&beta;-catenin) &mdash; Wnt pathway, 15%<br>
+              WTX (AMER1) &mdash; Xq11.1, ~30%
+            </div>
+          </div>
         </div>
-        <div class="warning-box fragment">
-          <i class="fas fa-stethoscope danger-icon"></i> <strong>Screening Protocol:</strong> Physical exam + renal ultrasound <strong>every 3 months until age 7</strong> for all high-risk syndromes. Rationale: 90&ndash;98% of tumors occur by age 7.
-        </div>
+        <aside class="notes">Genetic predisposition in 10-33% of cases. WAGR: 11p13 deletion affecting WT1 + PAX6 (aniridia). 45-60% WT risk, earlier presentation (median 22mo), 37% bilateral. Denys-Drash: WT1 missense mutations in zinc finger domain. Approaching 90% WT risk, intralobar rests, stromal-predominant tumors. BWS: 11p15.5 imprinting abnormalities. 5-10% WT risk, perilobar rests, more bilateral. Together WT1, WTX, CTNNB1 explain only ~one-third of WT — enormous genetic heterogeneity. Bilateral tumors present earlier reflecting germline predisposition (Knudson two-hit hypothesis).</aside>
       </section>
 
-      <!-- WT: Molecular Biology -->
+      <!-- ========================================== -->
+      <!-- BLOCK 4: Staging -->
+      <!-- ========================================== -->
       <section>
-        <h2>Molecular Biology of Wilms Tumor</h2>
-        <div class="two-col">
-          <div>
-            <h3>Key Genetic Loci</h3>
-            <div class="timeline">
-              <div class="timeline-item fragment">
-                <div class="timeline-title">WT1 (11p13)</div>
-                <div class="timeline-desc">Tumor suppressor gene; mutated in WAGR and Denys-Drash. Involved in kidney/gonad development.</div>
-              </div>
-              <div class="timeline-item fragment">
-                <div class="timeline-title">WT2 / 11p15 (IGF2)</div>
-                <div class="timeline-desc">Imprinting center; LOH or LOI at 11p15 associated with Beckwith-Wiedemann. IGF2 overexpression.</div>
-              </div>
-              <div class="timeline-item fragment">
-                <div class="timeline-title">CTNNB1 (&beta;-catenin)</div>
-                <div class="timeline-desc">Wnt pathway activating mutations; often co-occurs with WT1 mutations.</div>
-              </div>
-              <div class="timeline-item fragment">
-                <div class="timeline-title">WTX (AMER1) at Xq11.1</div>
-                <div class="timeline-desc">Deleted/mutated in ~30% of WT; Wnt pathway regulator.</div>
-              </div>
-            </div>
+        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Question 4</h2>
+        <div class="quiz-container" id="q4">
+          <div class="quiz-question">A Wilms tumor is biopsied prior to removal. The tumor is otherwise limited to the kidney with no lymph node involvement. What is the COG stage?</div>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q4')"><div class="option-letter">A</div><div>Stage I</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q4')"><div class="option-letter">B</div><div>Stage II</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, true, 'q4')"><div class="option-letter">C</div><div>Stage III</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q4')"><div class="option-letter">D</div><div>Stage IV</div></div>
           </div>
-          <div>
-            <h3>Prognostic Biomarkers</h3>
-            <div class="info-box fragment">
-              <strong style="color:var(--rose)">Unfavorable Markers:</strong>
-              <ul class="small" style="margin-top:0.3em">
-                <li><strong>1q gain</strong> &mdash; Most powerful adverse marker</li>
-                <li><strong>Combined LOH 1p + 16q</strong> &mdash; Increased relapse risk</li>
-                <li><strong>11p15 LOH/LOI</strong> &mdash; Fewer data, under investigation</li>
-              </ul>
-            </div>
-            <div class="info-box fragment">
-              <strong style="color:var(--emerald)">Clinical Impact:</strong>
-              <ul class="small" style="margin-top:0.3em">
-                <li>Used to <span class="highlight">intensify treatment</span> in Stage I/II FHWT</li>
-                <li>COG AREN trials: 1q gain + LOH 1p/16q &rarr; upgrade to DD4A or Regimen M</li>
-                <li>SIOP: Blastemal type after chemo = high risk</li>
-              </ul>
-            </div>
-            <div class="pearl-box fragment">
-              <i class="fas fa-gem key-icon"></i> <strong>Key:</strong> TP53 mutations are hallmark of anaplastic histology and predict chemoresistance.
-            </div>
-          </div>
+          <div class="quiz-feedback" id="q4-feedback"></div>
         </div>
+        <aside class="notes">This is a classic trap question. Biopsy before removal = automatic Stage III per COG criteria, regardless of all other factors. This is why COG prefers upfront surgery without preceding biopsy. Other Stage III triggers: LN involvement, spillage, peritoneal implants, removed in more than one piece, positive margins.</aside>
       </section>
 
-      <!-- WT: Presentation -->
-      <section>
-        <h2>Clinical Presentation</h2>
-        <div class="two-col">
-          <div>
-            <h3>Wilms Tumor</h3>
-            <div style="font-size:0.85em">
-              <div style="display:flex; align-items:center; gap:10px; margin:0.5em 0" class="fragment">
-                <div style="color:var(--teal); font-weight:900; font-size:1.3em; width:50px">83%</div>
-                <div>Abdominal mass/distention</div>
-              </div>
-              <div style="display:flex; align-items:center; gap:10px; margin:0.5em 0" class="fragment">
-                <div style="color:var(--teal); font-weight:900; font-size:1.3em; width:50px">37%</div>
-                <div>Abdominal pain</div>
-              </div>
-              <div style="display:flex; align-items:center; gap:10px; margin:0.5em 0" class="fragment">
-                <div style="color:var(--teal); font-weight:900; font-size:1.3em; width:50px">23%</div>
-                <div>Fever</div>
-              </div>
-              <div style="display:flex; align-items:center; gap:10px; margin:0.5em 0" class="fragment">
-                <div style="color:var(--teal); font-weight:900; font-size:1.3em; width:50px">25%</div>
-                <div>Hematuria</div>
-              </div>
-              <div style="display:flex; align-items:center; gap:10px; margin:0.5em 0" class="fragment">
-                <div style="color:var(--teal); font-weight:900; font-size:1.3em; width:50px">25%</div>
-                <div>Hypertension</div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="pearl-box fragment">
-              <i class="fas fa-gem key-icon"></i> <strong>Classic Scenario:</strong> A <span class="highlight-amber">healthy-appearing child</span> with an incidentally discovered, firm, smooth, non-tender abdominal mass &mdash; found during bathing or dressing.
-            </div>
-            <div class="warning-box fragment">
-              <i class="fas fa-exchange-alt danger-icon"></i> <strong>WT vs Neuroblastoma:</strong><br>
-              <table class="small" style="margin-top:0.5em">
-                <tr><td></td><td><strong>Wilms</strong></td><td><strong>Neuroblastoma</strong></td></tr>
-                <tr><td>Appearance</td><td class="highlight-emerald">Healthy</td><td class="highlight-rose">Ill-appearing</td></tr>
-                <tr><td>Calcification</td><td>5&ndash;10%</td><td>60&ndash;70%</td></tr>
-                <tr><td>Mass origin</td><td>Intrarenal</td><td>Adrenal/paraspinal</td></tr>
-                <tr><td>Crosses midline</td><td>Rare</td><td>Common</td></tr>
-              </table>
-            </div>
-            <div class="info-box fragment">
-              <i class="fas fa-info-circle" style="color:var(--teal)"></i> ~10% have <strong>acquired von Willebrand disease</strong> (coagulopathy) &mdash; check coag studies!
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- WT: Imaging -->
-      <section>
-        <h2>Diagnostic Imaging</h2>
-        <div class="two-col">
-          <div>
-            <h3>Initial Workup</h3>
-            <ul class="small">
-              <li class="fragment"><strong>Abdominal ultrasound</strong> &mdash; first-line</li>
-              <li class="fragment"><strong>CT abdomen/pelvis with contrast</strong> or MRI</li>
-              <li class="fragment"><strong>Chest CT</strong> &mdash; lung metastasis screening</li>
-              <li class="fragment"><strong>Urine catecholamines</strong> (HVA/VMA) &mdash; rule out neuroblastoma</li>
-            </ul>
-            <h3 class="fragment" style="margin-top:1em">Lab Studies</h3>
-            <ul class="small">
-              <li class="fragment">CBC with differential</li>
-              <li class="fragment">CMP, urinalysis</li>
-              <li class="fragment">Coagulation studies (PT/PTT)</li>
-              <li class="fragment">Screen for predisposition syndromes</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Imaging Characteristics</h3>
-            <div class="info-box fragment">
-              <strong>Wilms Tumor:</strong>
-              <ul class="small">
-                <li>Large, well-circumscribed intrarenal mass</li>
-                <li>Heterogeneous enhancement</li>
-                <li><span class="highlight">"Claw sign"</span> &mdash; normal renal parenchyma wrapping around tumor</li>
-                <li>Minimal calcification (5&ndash;10%)</li>
-                <li>Check for renal vein/IVC tumor thrombus</li>
-              </ul>
-            </div>
-            <div class="info-box fragment">
-              <strong>CMN on MRI:</strong>
-              <ul class="small">
-                <li>Classic: Homogeneous, <span class="highlight">"concentric ring sign"</span> (58%)</li>
-                <li>T2-isointense, T1-hypointense</li>
-                <li>Cellular type: more heterogeneous, larger</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- WT: COG Staging -->
+      <!-- TEACH 4: COG Staging -->
       <section>
         <h2>COG Staging System</h2>
         <div class="badge">Children's Oncology Group</div>
         <div class="stage-flow">
-          <div class="stage-box fragment">
-            <div class="stage-num">I</div>
-            <div class="stage-desc">Limited to kidney<br>Completely resected<br>Capsule intact</div>
-          </div>
-          <div class="stage-arrow fragment"><i class="fas fa-chevron-right"></i></div>
-          <div class="stage-box fragment">
-            <div class="stage-num">II</div>
-            <div class="stage-desc">Extends beyond kidney<br>Completely resected<br>No residual tumor</div>
-          </div>
-          <div class="stage-arrow fragment"><i class="fas fa-chevron-right"></i></div>
-          <div class="stage-box fragment">
-            <div class="stage-num">III</div>
-            <div class="stage-desc">Residual tumor<br>in abdomen<br>LN+, spillage, biopsy</div>
-          </div>
-          <div class="stage-arrow fragment"><i class="fas fa-chevron-right"></i></div>
-          <div class="stage-box fragment">
-            <div class="stage-num">IV</div>
-            <div class="stage-desc">Hematogenous<br>metastases<br>Lung, liver, bone, brain</div>
-          </div>
-          <div class="stage-arrow fragment"><i class="fas fa-chevron-right"></i></div>
-          <div class="stage-box fragment" style="border-color: var(--amber)">
-            <div class="stage-num" style="color:var(--amber)">V</div>
-            <div class="stage-desc">Bilateral renal<br>involvement<br>at diagnosis</div>
-          </div>
+          <div class="stage-box"><div class="stage-num">I</div><div class="stage-desc">Limited to kidney<br>Completely resected<br>Capsule intact</div></div>
+          <div class="stage-arrow"><i class="fas fa-chevron-right"></i></div>
+          <div class="stage-box"><div class="stage-num">II</div><div class="stage-desc">Beyond kidney<br>Completely resected<br>No residual</div></div>
+          <div class="stage-arrow"><i class="fas fa-chevron-right"></i></div>
+          <div class="stage-box"><div class="stage-num">III</div><div class="stage-desc">Residual in abdomen<br>LN+, spillage, biopsy<br>Positive margins</div></div>
+          <div class="stage-arrow"><i class="fas fa-chevron-right"></i></div>
+          <div class="stage-box"><div class="stage-num">IV</div><div class="stage-desc">Hematogenous mets<br>Lung, liver, bone<br>Distant LN</div></div>
+          <div class="stage-arrow"><i class="fas fa-chevron-right"></i></div>
+          <div class="stage-box" style="border-color:var(--amber)"><div class="stage-num" style="color:var(--amber)">V</div><div class="stage-desc">Bilateral<br>at diagnosis<br>Each side I-IV</div></div>
         </div>
-        <div class="warning-box fragment" style="margin-top:1em">
-          <i class="fas fa-exclamation-triangle danger-icon"></i> <strong>Stage III triggers include:</strong> LN involvement, peritoneal implants, tumor spillage, biopsy before removal, tumor removed in &gt;1 piece, positive margins.
+        <div class="warning-box" style="margin-top:0.5em">
+          <strong>Stage III Triggers (know these cold):</strong> LN involvement, peritoneal implants/penetration, tumor spillage, biopsy before removal, removed in &gt;1 piece, positive margins, unresectable tumor
         </div>
+        <aside class="notes">COG staging drives treatment intensity. Stage I: limited to kidney, completely resected, capsule intact, no biopsy before removal, renal sinus vessels clear, negative margins and nodes. Stage II: extends beyond kidney but completely excised with negative margins and nodes. Stage III: residual nonhematogenous tumor in abdomen — the catch-all for anything that goes wrong. The biopsy-before-removal trap is a favorite board question. Stage IV: hematogenous metastases — lungs most common, then liver, bone, brain. Stage V: bilateral at diagnosis, each kidney staged independently. Stage determines chemo regimen and whether radiation is needed.</aside>
       </section>
 
-      <!-- WT: COG vs SIOP -->
+      <!-- ========================================== -->
+      <!-- BLOCK 5: COG vs SIOP -->
+      <!-- ========================================== -->
       <section>
-        <h2>COG vs. SIOP: Two Philosophies</h2>
-        <div class="vs-container">
-          <div class="vs-card fragment">
-            <h3 style="text-align:center"><i class="fas fa-flag-usa" style="color:var(--teal)"></i> COG (North America)</h3>
-            <ul class="small">
-              <li><strong>Upfront surgery</strong> &rarr; then chemotherapy</li>
-              <li>Staging based on surgical/pathologic findings</li>
-              <li>Allows complete histologic assessment</li>
-              <li>Identifies anaplasia pre-chemo</li>
-              <li>Risk: more surgical complications (14.6% tumor rupture)</li>
-            </ul>
+        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Question 5</h2>
+        <div class="quiz-container" id="q5">
+          <div class="quiz-question">Which approach to Wilms tumor management uses neoadjuvant chemotherapy before surgery as the standard protocol?</div>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q5')"><div class="option-letter">A</div><div>COG (Children's Oncology Group) — North America</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, true, 'q5')"><div class="option-letter">B</div><div>SIOP (International Society of Paediatric Oncology) — Europe</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q5')"><div class="option-letter">C</div><div>Both use neoadjuvant chemotherapy as standard</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q5')"><div class="option-letter">D</div><div>Neither — surgery first is universal</div></div>
           </div>
-          <div class="vs-divider fragment">VS</div>
-          <div class="vs-card fragment">
-            <h3 style="text-align:center"><i class="fas fa-globe-europe" style="color:var(--purple)"></i> SIOP (Europe/International)</h3>
-            <ul class="small">
-              <li><strong>Neoadjuvant chemotherapy</strong> &rarr; then surgery</li>
-              <li>Staging after preoperative treatment</li>
-              <li>Tumor shrinkage &rarr; easier resection</li>
-              <li>0% tumor rupture rate</li>
-              <li>Risk: may alter histology, miss anaplasia</li>
-            </ul>
-          </div>
+          <div class="quiz-feedback" id="q5-feedback"></div>
         </div>
-        <div class="info-box fragment" style="margin-top:1em">
-          <i class="fas fa-equals" style="color:var(--teal)"></i> <strong>Bottom Line:</strong> Both approaches yield comparable overall survival (&gt;90% for favorable histology). The debate continues, but outcomes are equally excellent.
-        </div>
+        <aside class="notes">SIOP uses neoadjuvant chemo as standard (4 weeks localized, 6 weeks metastatic). COG uses upfront surgery except in specific circumstances (bilateral, unresectable, IVC thrombus above hepatic veins, solitary kidney). Both achieve >90% survival for favorable histology.</aside>
       </section>
 
-      <!-- WT: Histology -->
+      <!-- TEACH 5: COG vs SIOP + Histology -->
       <section>
-        <h2>Histologic Classification</h2>
+        <h2>Two Philosophies, Equal Outcomes</h2>
         <div class="two-col">
           <div>
-            <h3 class="highlight-emerald"><i class="fas fa-check-circle"></i> Favorable Histology (FHWT)</h3>
+            <h3><i class="fas fa-flag-usa" style="color:var(--teal)"></i> COG (North America)</h3>
             <ul class="small">
-              <li class="fragment"><strong>Triphasic pattern:</strong> blastemal + epithelial + stromal</li>
-              <li class="fragment">Can be biphasic or monophasic</li>
-              <li class="fragment">No anaplastic features</li>
-              <li class="fragment"><span class="highlight-emerald">5-year OS: &gt;90%</span></li>
+              <li><strong>Upfront surgery</strong> &rarr; then chemo</li>
+              <li>Unaltered histology + molecular info</li>
+              <li>Identifies anaplasia pre-chemo</li>
+              <li>Risk: 14.6% tumor rupture</li>
             </ul>
-            <div class="info-box fragment" style="margin-top:1em">
-              <strong>SIOP Risk Groups (post-chemo):</strong><br>
-              <span class="tag tag-emerald">Low</span> Completely necrotic<br>
-              <span class="tag tag-teal">Intermediate</span> Epithelial, stromal, mixed, regressive<br>
-              <span class="tag tag-rose">High</span> Blastemal predominant, diffuse anaplasia
-            </div>
+            <h3 style="margin-top:0.5em"><i class="fas fa-globe-europe" style="color:var(--purple)"></i> SIOP (Europe)</h3>
+            <ul class="small">
+              <li><strong>Neoadjuvant chemo</strong> &rarr; then surgery</li>
+              <li>Tumor shrinks, easier resection</li>
+              <li><strong>0% tumor rupture</strong></li>
+              <li>Risk: altered histology, may miss anaplasia</li>
+            </ul>
           </div>
           <div>
-            <h3 class="highlight-rose"><i class="fas fa-exclamation-circle"></i> Anaplastic Histology</h3>
-            <div class="warning-box fragment">
-              <strong>Focal Anaplasia:</strong>
-              <ul class="small">
-                <li>Defined focus within primary tumor</li>
-                <li>Confined to renal parenchyma</li>
-                <li>1&ndash;2 foci, &lt;15mm each</li>
-                <li>Not in vascular spaces</li>
-                <li>Better prognosis with appropriate therapy</li>
-              </ul>
+            <h3>Histologic Classification</h3>
+            <div class="info-box">
+              <strong class="highlight-emerald">Favorable Histology (90%):</strong><br>
+              Triphasic: blastemal + epithelial + stromal<br>
+              No anaplasia &rarr; <span class="highlight-emerald">&gt;90% 5-yr OS</span>
             </div>
-            <div class="warning-box fragment">
-              <strong>Diffuse Anaplasia:</strong>
-              <ul class="small">
-                <li>Multifocal / non-localized</li>
-                <li>Beyond tumor capsule</li>
-                <li>In vessels, extrarenal sites, or metastases</li>
-                <li><span class="highlight-rose">Stage IV: 29&ndash;45% 5-year OS</span></li>
-                <li>Associated with <strong>TP53 mutations</strong></li>
-              </ul>
+            <div class="warning-box">
+              <strong class="highlight-rose">Anaplastic (5-10%):</strong><br>
+              <strong>Focal:</strong> Confined foci, &lt;15mm, not in vessels &rarr; better prognosis<br>
+              <strong>Diffuse:</strong> Multifocal, beyond capsule, TP53 mutations &rarr; <span class="highlight-rose">29-45% OS Stage IV</span>
+            </div>
+            <div class="pearl-box">
+              <i class="fas fa-gem key-icon"></i> <strong>SIOP Post-Chemo Risk:</strong><br>
+              <span class="tag tag-emerald">Low</span> Completely necrotic<br>
+              <span class="tag tag-teal">Intermediate</span> Epithelial, stromal, mixed<br>
+              <span class="tag tag-rose">High</span> Blastemal predominant, DA
             </div>
           </div>
         </div>
+        <aside class="notes">Both approaches yield equivalent survival >90% for favorable histology — this is the key message. COG advantage: unaltered histology and molecular data for precise risk stratification. SIOP advantage: 0% rupture, easier surgery, lower complications. COG uses neoadjuvant chemo selectively for: bilateral disease, unresectable tumors, IVC thrombus above hepatic veins, solitary kidney. Histology: FHWT is 90% of cases with triphasic pattern. Anaplasia (5-10%) defined by markedly enlarged hyperchromatic nuclei and abnormal mitotic figures. Focal = better, Diffuse = bad (TP53 mutations = chemoresistance). SIOP classifies AFTER chemo: blastemal predominance after chemo = high risk (blastema survived the chemo).</aside>
       </section>
 
-      <!-- WT: Treatment Regimens -->
+      <!-- ========================================== -->
+      <!-- BLOCK 6: Treatment -->
+      <!-- ========================================== -->
       <section>
-        <h2>COG Chemotherapy Regimens</h2>
-        <table>
-          <thead>
-            <tr><th>Regimen</th><th>Risk Level</th><th>Agents</th><th>Duration</th></tr>
-          </thead>
+        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Question 6</h2>
+        <div class="quiz-container" id="q6">
+          <div class="quiz-question">Diffuse anaplasia in Wilms tumor is associated with mutations in which gene, conferring chemoresistance?</div>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q6')"><div class="option-letter">A</div><div>WT1</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q6')"><div class="option-letter">B</div><div>CTNNB1 (beta-catenin)</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, true, 'q6')"><div class="option-letter">C</div><div>TP53</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q6')"><div class="option-letter">D</div><div>SMARCB1 (INI1)</div></div>
+          </div>
+          <div class="quiz-feedback" id="q6-feedback"></div>
+        </div>
+        <aside class="notes">TP53 mutations are the hallmark of anaplastic histology. They predict chemoresistance — which is why diffuse anaplasia has such poor outcomes. WT1 = WAGR/Denys-Drash. CTNNB1 = Wnt pathway activation. SMARCB1 = rhabdoid tumor.</aside>
+      </section>
+
+      <!-- TEACH 6: Chemotherapy + Molecular -->
+      <section>
+        <h2>Treatment: Risk-Stratified Chemotherapy</h2>
+        <table style="font-size:0.65em">
+          <thead><tr><th>Regimen</th><th>Risk</th><th>Agents</th><th>Key Point</th></tr></thead>
           <tbody>
-            <tr class="fragment">
-              <td><strong>EE4A</strong></td>
-              <td><span class="tag tag-emerald">Very Low / Low</span></td>
-              <td>Vincristine + Dactinomycin</td>
-              <td>18 weeks</td>
-            </tr>
-            <tr class="fragment">
-              <td><strong>DD4A</strong></td>
-              <td><span class="tag tag-teal">Standard</span></td>
-              <td>Vincristine + Dactinomycin + <span class="highlight-amber">Doxorubicin</span></td>
-              <td>24 weeks</td>
-            </tr>
-            <tr class="fragment">
-              <td><strong>Regimen M</strong></td>
-              <td><span class="tag tag-amber">Higher Risk</span></td>
-              <td>VCR + Dact + Doxo + Cyclophosphamide + Etoposide</td>
-              <td>24 weeks</td>
-            </tr>
-            <tr class="fragment">
-              <td><strong>Regimen I</strong></td>
-              <td><span class="tag tag-rose">Blastemal</span></td>
-              <td>VCR + Doxo + Cyclo + Etoposide (high-dose)</td>
-              <td>24 weeks</td>
-            </tr>
-            <tr class="fragment">
-              <td><strong>UH-1</strong></td>
-              <td><span class="tag tag-rose">Stage IV FA</span></td>
-              <td>VCR + Doxo + Cyclo + Carboplatin + Etoposide</td>
-              <td>Intensive</td>
-            </tr>
-            <tr class="fragment">
-              <td><strong>UH-2</strong></td>
-              <td><span class="tag tag-rose">Stage II&ndash;IV DA</span></td>
-              <td>VCR + Doxo + Cyclo + Carbo + Etop + <strong>Irinotecan</strong></td>
-              <td>Most toxic</td>
-            </tr>
+            <tr><td><strong>EE4A</strong></td><td><span class="tag tag-emerald">Very Low/Low</span></td><td>VCR + Dactinomycin</td><td>18 weeks, no doxorubicin</td></tr>
+            <tr><td><strong>DD4A</strong></td><td><span class="tag tag-teal">Standard</span></td><td>VCR + Dact + Doxorubicin</td><td>24 weeks, cumulative doxo 150 mg/m²</td></tr>
+            <tr><td><strong>Regimen M</strong></td><td><span class="tag tag-amber">Higher</span></td><td>DD4A + Cyclo + Etoposide</td><td>For adverse molecular markers</td></tr>
+            <tr><td><strong>UH-2</strong></td><td><span class="tag tag-rose">Stage II-IV DA</span></td><td>VCR+Doxo+Cyclo+Carbo+Etop+Irinotecan</td><td>Most toxic WT regimen</td></tr>
           </tbody>
         </table>
-        <div class="pearl-box fragment" style="margin-top:0.5em">
-          <i class="fas fa-gem key-icon"></i> <strong>Doxorubicin:</strong> Cumulative dose in DD4A = 150 mg/m&sup2;. Monitor echocardiogram &mdash; younger children and females more susceptible to cardiotoxicity.
+        <div class="two-col" style="margin-top:0.8em">
+          <div class="info-box">
+            <strong>Unfavorable Molecular Markers:</strong>
+            <ul class="small">
+              <li><strong>1q gain</strong> — most powerful adverse marker</li>
+              <li><strong>Combined LOH 1p + 16q</strong> — 3.3x relapse, 12x mortality</li>
+              <li><strong>TP53 mutations</strong> — hallmark of anaplasia</li>
+            </ul>
+          </div>
+          <div class="info-box">
+            <strong>Radiation Indications:</strong>
+            <ul class="small">
+              <li>Stage III FHWT: flank/whole-abdomen RT</li>
+              <li>Stage IV: whole-lung RT for pulmonary mets</li>
+              <li>Timing: 10-14 days post-surgery</li>
+            </ul>
+          </div>
         </div>
+        <aside class="notes">Treatment escalates with risk. EE4A (vincristine + dactinomycin) is the mildest — no doxorubicin, so no cardiotoxicity risk. DD4A adds doxorubicin at cumulative 150 mg/m² — need echo monitoring. Regimen M adds cyclophosphamide and etoposide for patients with adverse molecular markers (1q gain, LOH 1p/16q). UH-2 is the most toxic — used for Stage II-IV diffuse anaplasia with addition of irinotecan. Molecular markers now drive treatment intensity: 1q gain increases relapse 3.3x, combined LOH 1p/16q increases mortality 12x. These can upgrade treatment even in lower-stage disease. Radiation: Stage III FHWT gets flank RT, Stage IV gets lung RT. Goal of modern protocols: de-escalate whenever possible to minimize devastating late effects.</aside>
       </section>
 
-      <!-- WT: Radiation -->
+      <!-- ========================================== -->
+      <!-- BLOCK 7: Surgery -->
+      <!-- ========================================== -->
       <section>
-        <h2>Radiation Therapy</h2>
-        <div class="two-col">
-          <div>
-            <h3>Indications</h3>
-            <ul class="small">
-              <li class="fragment"><strong>Stage III FHWT:</strong> Flank or whole-abdomen radiation</li>
-              <li class="fragment"><strong>Stage IV:</strong> Whole-lung radiation for pulmonary metastases</li>
-              <li class="fragment"><strong>Anaplastic tumors:</strong> Higher doses for Stage III DA</li>
-            </ul>
-            <div class="info-box fragment" style="margin-top:1em">
-              <strong>Timing:</strong> RT to primary site typically <span class="highlight">10&ndash;14 days post-surgery</span>. Coordinate with chemotherapy to avoid co-administration with full-dose dactinomycin or doxorubicin.
-            </div>
+        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Question 7</h2>
+        <div class="quiz-container" id="q7">
+          <div class="quiz-question">What is the most significant risk factor for surgical complications during Wilms tumor nephrectomy?</div>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q7')"><div class="option-letter">A</div><div>Tumor size &ge;10 cm (OR 2.0)</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q7')"><div class="option-letter">B</div><div>IVC tumor thrombus extension (OR 3.8)</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q7')"><div class="option-letter">C</div><div>Flank/paramedian incision (OR 5.3)</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, true, 'q7')"><div class="option-letter">D</div><div>General surgeon performing nephrectomy (OR 9.0)</div></div>
           </div>
-          <div>
-            <h3>NOT Indicated</h3>
-            <ul class="small">
-              <li class="fragment">Stage I&ndash;II Favorable Histology</li>
-              <li class="fragment">Stage I Anaplastic (focal)</li>
-              <li class="fragment">Low-risk completely necrotic tumors</li>
-            </ul>
-            <div class="pearl-box fragment" style="margin-top:1em">
-              <i class="fas fa-gem key-icon"></i> Goal of modern protocols: <strong>de-escalate radiation</strong> whenever possible to minimize late effects (second malignancies, growth impairment, cardiac toxicity).
-            </div>
-          </div>
+          <div class="quiz-feedback" id="q7-feedback"></div>
         </div>
+        <aside class="notes">The answer is general surgeon performing the nephrectomy (OR 9.0) — by far the highest odds ratio for complications. Even higher than IVC extension (3.8x), flank incision (5.3x), or tumor size ≥10cm (2.0x). This data from NWTS-4 strongly supports that Wilms nephrectomy should be done by pediatric surgeons at experienced centers.</aside>
       </section>
 
-      <!-- WT: Surgery -->
+      <!-- TEACH 7: Surgical Technique -->
       <section>
         <h2>Surgical Management</h2>
         <div class="two-col">
           <div>
-            <h3><i class="fas fa-cut" style="color:var(--teal)"></i> Radical Nephrectomy</h3>
-            <div class="timeline">
-              <div class="timeline-item fragment">
-                <div class="timeline-title">1. Transabdominal approach</div>
-                <div class="timeline-desc">Preferred over flank (OR 5.3&times; complication risk with flank incision)</div>
-              </div>
-              <div class="timeline-item fragment">
-                <div class="timeline-title">2. Explore &amp; biopsy</div>
-                <div class="timeline-desc">Liver, peritoneal surfaces, contralateral kidney</div>
-              </div>
-              <div class="timeline-item fragment">
-                <div class="timeline-title">3. Assess vessels</div>
-                <div class="timeline-desc">Evaluate renal vein/IVC for tumor thrombus</div>
-              </div>
-              <div class="timeline-item fragment">
-                <div class="timeline-title">4. Lymph node sampling</div>
-                <div class="timeline-desc"><strong>Minimum 5 nodes</strong> from hilum, pericaval, para-aortic</div>
-              </div>
-              <div class="timeline-item fragment">
-                <div class="timeline-title">5. En bloc nephrectomy</div>
-                <div class="timeline-desc">Avoid tumor spillage. Adrenalectomy NOT required if uninvolved.</div>
-              </div>
+            <h3><i class="fas fa-cut" style="color:var(--teal)"></i> Radical Nephrectomy Steps</h3>
+            <ul class="small">
+              <li><strong>Transabdominal approach</strong> (preferred over flank — OR 5.3x complication risk with flank)</li>
+              <li>Explore: biopsy liver, peritoneal surfaces</li>
+              <li>Assess renal vein + IVC for thrombus</li>
+              <li><strong>Lymph node sampling: minimum 5 nodes</strong> (hilum, pericaval, para-aortic)</li>
+              <li>En bloc nephrectomy without spillage</li>
+              <li>Adrenalectomy NOT required if uninvolved</li>
+            </ul>
+            <div class="warning-box" style="margin-top:0.5em">
+              <strong>Complications (NWTS-4: 12.7%):</strong><br>
+              SBO 5.1% | Hemorrhage 1.9% | Wound infection 1.9%
             </div>
           </div>
           <div>
             <h3><i class="fas fa-hand-holding-medical" style="color:var(--emerald)"></i> Nephron-Sparing Surgery</h3>
-            <div class="info-box fragment">
-              <strong>Indications for NSS:</strong>
-              <ul class="small">
-                <li>Bilateral tumors (Stage V)</li>
-                <li>Solitary kidney</li>
-                <li>Predisposing syndromes</li>
-                <li>High risk for CKD</li>
-              </ul>
+            <div class="info-box">
+              <strong>Indications:</strong> Bilateral (Stage V), solitary kidney, predisposing syndromes, high CKD risk
             </div>
-            <div class="info-box fragment">
-              <strong>Favorable Imaging for NSS:</strong>
-              <ul class="small">
-                <li>Peripheral/polar location</li>
-                <li>Preserves &ge;1/3 normal kidney</li>
-                <li>No hilar/sinus invasion</li>
-                <li>Clear tumor&ndash;parenchyma interface</li>
-              </ul>
+            <div class="info-box">
+              <strong>Favorable imaging:</strong> Peripheral/polar, preserves &ge;1/3 kidney, no hilar invasion, clear interface
             </div>
-            <div class="pearl-box fragment">
-              <i class="fas fa-gem key-icon"></i> NSS protocol: Neoadjuvant chemo 6&ndash;12 weeks &rarr; re-image at week 6 &rarr; surgery within 12 weeks of starting chemo.
+            <div class="pearl-box">
+              <i class="fas fa-gem key-icon"></i> <strong>NSS protocol:</strong> Neoadjuvant chemo 6-12 weeks &rarr; re-image at week 6 &rarr; surgery within 12 weeks. Never do bilateral nephrectomy upfront.
             </div>
           </div>
         </div>
+        <aside class="notes">Surgical management is where we make the biggest difference. Transabdominal approach is mandatory — flank incision carries 5.3x complication risk. Key steps: explore, assess vessels for thrombus, mobilize tumor, ligate ureter low, ligate renal vessels, and critically — LYMPH NODE SAMPLING minimum 5 nodes from hilum, pericaval, para-aortic. Failure to sample nodes can upstage to Stage III. Complete nephrectomy en bloc without spillage. NSS for bilateral tumors, solitary kidney, predisposing syndromes. Protocol: neoadjuvant chemo 6-12 weeks, re-image at week 6, operate within 12 weeks. Goal: preserve at least 1/3 normal kidney. After nephrectomy with 30-50yr follow-up, 40% develop CKD — this is why NSS matters.</aside>
       </section>
 
-      <!-- WT: Complications -->
+      <!-- ========================================== -->
+      <!-- BLOCK 8: Bone Metastases -->
+      <!-- ========================================== -->
       <section>
-        <h2>Surgical Complications</h2>
-        <div class="two-col">
-          <div>
-            <h3>Perioperative (NWTS-4)</h3>
-            <p class="small" style="color:var(--slate)">Overall rate: 12.7% (down from 19.8% in NWTS-3)</p>
-            <table>
-              <thead><tr><th>Complication</th><th>Rate</th></tr></thead>
-              <tbody>
-                <tr class="fragment"><td>Intestinal obstruction</td><td><strong>5.1%</strong> (most common)</td></tr>
-                <tr class="fragment"><td>Extensive hemorrhage</td><td>1.9%</td></tr>
-                <tr class="fragment"><td>Wound infection</td><td>1.9%</td></tr>
-                <tr class="fragment"><td>Vascular injury</td><td>1.5%</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div>
-            <h3>Risk Factors</h3>
-            <div class="warning-box fragment">
-              <strong>Major Risk Factors:</strong>
-              <ul class="small">
-                <li><strong>General surgeon</strong> performing nephrectomy: <span class="highlight-rose">OR 9.0&times;</span> vs pediatric surgeon</li>
-                <li>IVC extension: OR 3.8</li>
-                <li>Flank/paramedian incision: OR 5.3</li>
-                <li>Tumor &ge;10 cm: OR 2.0</li>
-              </ul>
-            </div>
-            <div class="pearl-box fragment">
-              <i class="fas fa-gem key-icon"></i> Preoperative chemo reduces surgical complications &mdash; <strong>0% tumor rupture</strong> vs 14.6% with immediate nephrectomy.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- WT: Outcomes -->
-      <section>
-        <h2>Outcomes by Stage &amp; Histology</h2>
-        <div class="two-col">
-          <div>
-            <h3>Favorable Histology (5-yr OS)</h3>
-            <div style="font-size:0.85em">
-              <div class="fragment" style="margin:0.4em 0">
-                <div style="display:flex;justify-content:space-between"><span>Stage I</span><span class="highlight-emerald">96&ndash;97%</span></div>
-                <div class="score-bar"><div class="score-bar-fill excellent" style="width:97%"></div></div>
-              </div>
-              <div class="fragment" style="margin:0.4em 0">
-                <div style="display:flex;justify-content:space-between"><span>Stage II</span><span class="highlight-emerald">93&ndash;94%</span></div>
-                <div class="score-bar"><div class="score-bar-fill excellent" style="width:94%"></div></div>
-              </div>
-              <div class="fragment" style="margin:0.4em 0">
-                <div style="display:flex;justify-content:space-between"><span>Stage III</span><span class="highlight-amber">85&ndash;92%</span></div>
-                <div class="score-bar"><div class="score-bar-fill good" style="width:89%"></div></div>
-              </div>
-              <div class="fragment" style="margin:0.4em 0">
-                <div style="display:flex;justify-content:space-between"><span>Stage IV</span><span class="highlight-amber">84&ndash;89%</span></div>
-                <div class="score-bar"><div class="score-bar-fill good" style="width:87%"></div></div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <h3>By Histology Risk</h3>
-            <div style="font-size:0.85em">
-              <div class="fragment" style="margin:0.4em 0">
-                <div style="display:flex;justify-content:space-between"><span>Low risk (necrotic/epithelial/stromal)</span><span class="highlight-emerald">97&ndash;100%</span></div>
-                <div class="score-bar"><div class="score-bar-fill excellent" style="width:99%"></div></div>
-              </div>
-              <div class="fragment" style="margin:0.4em 0">
-                <div style="display:flex;justify-content:space-between"><span>Intermediate (FHWT)</span><span class="highlight-emerald">95%</span></div>
-                <div class="score-bar"><div class="score-bar-fill excellent" style="width:95%"></div></div>
-              </div>
-              <div class="fragment" style="margin:0.4em 0">
-                <div style="display:flex;justify-content:space-between"><span>High risk (blastemal/anaplastic)</span><span class="highlight-rose">75%</span></div>
-                <div class="score-bar"><div class="score-bar-fill poor" style="width:75%"></div></div>
-              </div>
-              <div class="fragment" style="margin:0.4em 0">
-                <div style="display:flex;justify-content:space-between"><span>Stage IV Diffuse Anaplasia</span><span class="highlight-rose">29&ndash;45%</span></div>
-                <div class="score-bar"><div class="score-bar-fill poor" style="width:37%"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============ QUIZ 1 ============ -->
-      <section>
-        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Knowledge Check #1</h2>
-        <div class="quiz-container" id="quiz1">
-          <div class="quiz-question">A 3-year-old healthy-appearing girl is found to have a firm, non-tender abdominal mass during a bath. CT shows a large intrarenal mass with a "claw sign" and no calcification. What is the most likely diagnosis?</div>
+        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Question 8</h2>
+        <div class="quiz-container" id="q8">
+          <div class="quiz-question">A child with a renal mass is found to have bone metastases to the spine and pelvis. Which tumor is most associated with osseous spread?</div>
           <div class="quiz-options">
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz1')">
-              <div class="option-letter">A</div>
-              <div>Neuroblastoma</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, true, 'quiz1')">
-              <div class="option-letter">B</div>
-              <div>Wilms tumor</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz1')">
-              <div class="option-letter">C</div>
-              <div>Congenital mesoblastic nephroma</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz1')">
-              <div class="option-letter">D</div>
-              <div>Renal cell carcinoma</div>
-            </div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q8')"><div class="option-letter">A</div><div>Wilms tumor (favorable histology)</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, true, 'q8')"><div class="option-letter">B</div><div>Clear cell sarcoma of the kidney</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q8')"><div class="option-letter">C</div><div>Congenital mesoblastic nephroma</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q8')"><div class="option-letter">D</div><div>Renal cell carcinoma</div></div>
           </div>
-          <div class="quiz-feedback" id="quiz1-feedback"></div>
+          <div class="quiz-feedback" id="q8-feedback"></div>
         </div>
+        <aside class="notes">Clear cell sarcoma of the kidney is known as the "bone-metastasizing renal tumor of childhood." 23% develop bone metastases to spine, pelvis, ribs. BCOR internal tandem duplications in 85%. Always get a bone scan — unlike standard Wilms workup.</aside>
       </section>
 
-      <!-- ============ QUIZ 2 ============ -->
+      <!-- TEACH 8: Rare Tumors -->
       <section>
-        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Knowledge Check #2</h2>
-        <div class="quiz-container" id="quiz2">
-          <div class="quiz-question">A Wilms tumor is biopsied prior to removal. The tumor is otherwise limited to the kidney with no lymph node involvement. What is the COG stage?</div>
-          <div class="quiz-options">
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz2')">
-              <div class="option-letter">A</div>
-              <div>Stage I</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz2')">
-              <div class="option-letter">B</div>
-              <div>Stage II</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, true, 'quiz2')">
-              <div class="option-letter">C</div>
-              <div>Stage III</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz2')">
-              <div class="option-letter">D</div>
-              <div>Stage IV</div>
-            </div>
-          </div>
-          <div class="quiz-feedback" id="quiz2-feedback"></div>
-        </div>
-      </section>
-
-      <!-- ============ SECTION: OTHER TUMORS ============ -->
-      <section class="section-divider" data-background-gradient="radial-gradient(ellipse at center, #0f2744, #0a1628)">
-        <div class="section-number">02</div>
-        <span class="tag tag-emerald">NEONATAL TUMORS &amp; RARE VARIANTS</span>
-        <h2>Beyond Wilms Tumor</h2>
-      </section>
-
-      <!-- CMN -->
-      <section>
-        <h2>Congenital Mesoblastic Nephroma</h2>
-        <div class="badge"><i class="fas fa-baby"></i> #1 in Neonates</div>
-        <div class="two-col">
-          <div>
-            <h3>Epidemiology</h3>
-            <ul class="small">
-              <li>3&ndash;10% of pediatric renal tumors</li>
-              <li><strong>Most common renal tumor in infants &lt;3 months</strong></li>
-              <li>90% diagnosed within first year of life</li>
-              <li>Median age: <span class="highlight">1 month</span></li>
-              <li>Male predominance 2:1</li>
-              <li>10&ndash;15% diagnosed prenatally</li>
-            </ul>
-            <h3 style="margin-top:0.8em">Subtypes</h3>
-            <div class="three-col" style="gap:10px; font-size:0.8em">
-              <div class="stat-card fragment" style="padding:12px">
-                <div style="font-weight:800; color:var(--emerald)">Classic</div>
-                <div class="tiny">45%</div>
-                <div class="tiny">EGFR ITD</div>
-                <div class="tiny highlight-emerald">0% recurrence</div>
-              </div>
-              <div class="stat-card fragment" style="padding:12px">
-                <div style="font-weight:800; color:var(--amber)">Cellular</div>
-                <div class="tiny">21%</div>
-                <div class="tiny">ETV6-NTRK3 fusion</div>
-                <div class="tiny highlight-amber">Higher recurrence</div>
-              </div>
-              <div class="stat-card fragment" style="padding:12px">
-                <div style="font-weight:800; color:var(--purple)">Mixed</div>
-                <div class="tiny">29%</div>
-                <div class="tiny">EGFR ITD</div>
-                <div class="tiny highlight-amber">Variable</div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <h3>Treatment</h3>
-            <div class="info-box fragment">
-              <strong>Surgery is curative:</strong> Complete nephrectomy is usually sufficient. <span class="highlight-emerald">96&ndash;100% survival.</span>
-            </div>
-            <div class="info-box fragment">
-              <strong>Chemo considerations:</strong>
-              <ul class="small">
-                <li>NOT routine for classic CMN</li>
-                <li>Consider for cellular variant in patients &gt;3 months</li>
-                <li>Tumor spillage / positive margins</li>
-                <li>Stage II&ndash;III cellular or mixed</li>
-                <li>Recurrent or metastatic disease</li>
-              </ul>
-            </div>
-            <div class="pearl-box fragment">
-              <i class="fas fa-gem key-icon"></i> <strong>New Targeted Therapy:</strong> ETV6-NTRK3 fusion makes cellular CMN susceptible to <span class="highlight">TRK inhibitors</span> (larotrectinib, entrectinib) for advanced/recurrent cases.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- RCC -->
-      <section>
-        <h2>Pediatric Renal Cell Carcinoma</h2>
-        <div class="two-col">
-          <div>
-            <h3>Key Differences from Adult RCC</h3>
-            <ul class="small">
-              <li class="fragment">2&ndash;6% of pediatric renal tumors</li>
-              <li class="fragment">Mean age: <span class="highlight">9&ndash;15 years</span></li>
-              <li class="fragment">Incidence increasing: +3.7%/year in children</li>
-              <li class="fragment">20% present with metastases at diagnosis</li>
-            </ul>
-            <h3 style="margin-top:0.8em">Histology: Pediatric vs Adult</h3>
-            <table class="fragment">
-              <thead><tr><th>Subtype</th><th>Pediatric</th><th>Adult</th></tr></thead>
-              <tbody>
-                <tr><td><strong>MiT-RCC (TFE3/TFEB)</strong></td><td class="highlight">36&ndash;56%</td><td>Rare</td></tr>
-                <tr><td><strong>Papillary</strong></td><td>20&ndash;30%</td><td>~15%</td></tr>
-                <tr><td><strong>Clear cell</strong></td><td>6&ndash;23%</td><td class="highlight-rose">~70%</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div>
-            <h3>Treatment</h3>
-            <div class="info-box fragment">
-              <strong>Surgery is the cornerstone:</strong> Complete resection is curative for localized disease. Even N1M0 does well without adjuvant therapy (87.1% 4-yr OS).
-            </div>
-            <div class="info-box fragment">
-              <strong>Metastatic/Unresectable:</strong><br>
-              <span class="highlight">Sunitinib</span> (TKI) per SIOP-RTSG UMBRELLA protocol<br>
-              Other options: axitinib, cabozantinib, nivolumab
-            </div>
-            <h3 style="margin-top:0.8em">Outcomes</h3>
-            <div style="font-size:0.8em" class="fragment">
-              <div style="display:flex;justify-content:space-between"><span>Localized</span><span class="highlight-emerald">96.8%</span></div>
-              <div class="score-bar"><div class="score-bar-fill excellent" style="width:97%"></div></div>
-              <div style="display:flex;justify-content:space-between; margin-top:0.3em"><span>Metastatic</span><span class="highlight-rose">45.6%</span></div>
-              <div class="score-bar"><div class="score-bar-fill poor" style="width:46%"></div></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Clear Cell Sarcoma & Rhabdoid Tumor -->
-      <section>
-        <h2>Rare but Critical Tumors</h2>
+        <h2>Rare But Critical Tumors</h2>
         <div class="two-col">
           <div>
             <h3 style="color:var(--amber)"><i class="fas fa-bone"></i> Clear Cell Sarcoma (CCSK)</h3>
             <ul class="small">
-              <li class="fragment"><strong>BCOR</strong> internal tandem duplications (85% of cases)</li>
-              <li class="fragment">Known as the <span class="highlight-amber">"bone-metastasizing renal tumor"</span></li>
-              <li class="fragment">23% develop bone metastases (spine, pelvis, ribs)</li>
-              <li class="fragment">Must get <strong>bone scan</strong> (unlike Wilms)</li>
-              <li class="fragment">Requires more intensive chemo + radiation</li>
-              <li class="fragment">Imaging can mimic Wilms &mdash; differentiation requires pathology</li>
+              <li><strong>BCOR</strong> internal tandem duplications (85%)</li>
+              <li><span class="highlight-amber">"Bone-metastasizing renal tumor"</span> — 23% get bone mets</li>
+              <li>Peak age: 2&ndash;4 years</li>
+              <li>Must get <strong>bone scan</strong> at staging</li>
+              <li>Requires intensive chemo + radiation</li>
+              <li>Late relapses up to 10+ years</li>
             </ul>
           </div>
           <div>
             <h3 style="color:var(--rose)"><i class="fas fa-brain"></i> Rhabdoid Tumor (MRTK)</h3>
             <ul class="small">
-              <li class="fragment"><strong>SMARCB1/INI1</strong> loss (chromosome 22q11.2)</li>
-              <li class="fragment">Median age: <span class="highlight-rose">&lt;1 year</span></li>
-              <li class="fragment">Most aggressive pediatric renal tumor</li>
-              <li class="fragment"><span class="highlight-rose">~25% have synchronous brain tumors</span> (AT/RT)</li>
-              <li class="fragment">Must get <strong>brain MRI</strong> at diagnosis</li>
-              <li class="fragment">Poor prognosis despite aggressive multimodal therapy</li>
+              <li><strong>SMARCB1/INI1</strong> loss (22q11.2)</li>
+              <li>Median age: <span class="highlight-rose">&lt;1 year</span></li>
+              <li>Most aggressive pediatric renal tumor</li>
+              <li><span class="highlight-rose">~25% synchronous brain tumors</span> (AT/RT)</li>
+              <li>Must get <strong>brain MRI</strong> at diagnosis</li>
+              <li>Only ~25-40% long-term survival</li>
             </ul>
           </div>
         </div>
-        <div class="warning-box fragment" style="margin-top:0.8em">
-          <i class="fas fa-exclamation-triangle danger-icon"></i> <strong>Critical Teaching Point:</strong> Any renal tumor in an infant &lt;6 months with aggressive features &rarr; think rhabdoid. Any renal tumor with bone mets &rarr; think clear cell sarcoma. Both require specific additional imaging and more aggressive protocols than standard Wilms.
+        <div class="warning-box" style="margin-top:0.5em">
+          <strong>Red Flags:</strong> Renal mass + bone mets &rarr; think CCSK. Infant + renal mass + brain mass &rarr; think rhabdoid. Both require different imaging and more aggressive protocols than Wilms.
         </div>
+        <aside class="notes">CCSK: 3-5% of pediatric renal tumors, driven by BCOR ITD in 85%. Called "bone-metastasizing renal tumor" because 23% develop bone mets (spine, pelvis, ribs) — unique among pediatric renal tumors. Can't distinguish from Wilms on imaging — diagnosis requires pathology. Late relapses possible up to 10+ years. Treatment: radical nephrectomy + intensive chemo with doxorubicin + flank radiation. Rhabdoid: SMARCB1/INI1 loss creates dependency on EZH2 (therapeutic target). Most aggressive pediatric renal tumor — median age under 1 year. 25% have synchronous AT/RT brain tumors, so BRAIN MRI IS MANDATORY. Imaging clue: subcapsular crescent-shaped fluid collection + curvilinear calcifications. Prognosis devastating: ~25-40% long-term survival. Tazemetostat (EZH2 inhibitor) showing early promise in Phase I trials.</aside>
       </section>
 
-      <!-- Nephrogenic Rests -->
+      <!-- ========================================== -->
+      <!-- BLOCK 9: Pediatric RCC -->
+      <!-- ========================================== -->
       <section>
-        <h2>Nephrogenic Rests</h2>
-        <p class="small" style="color:var(--slate)">Precursor lesions found in ~1% of infant autopsies and 35&ndash;40% of Wilms tumor specimens</p>
-        <div class="two-col">
-          <div>
-            <div class="stat-card fragment">
-              <h3 style="color:var(--teal)">Perilobar Rests (PLNR)</h3>
-              <ul class="small">
-                <li>Located at kidney periphery</li>
-                <li>Associated with <strong>Beckwith-Wiedemann</strong></li>
-                <li>11p15 LOH/LOI</li>
-                <li>Tend to be multifocal &rarr; <strong>nephroblastomatosis</strong></li>
-                <li>Higher risk of bilateral/metachronous WT</li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <div class="stat-card fragment">
-              <h3 style="color:var(--purple)">Intralobar Rests (ILNR)</h3>
-              <ul class="small">
-                <li>Located anywhere within renal lobe</li>
-                <li>Associated with <strong>WAGR, Denys-Drash</strong></li>
-                <li>WT1 mutations</li>
-                <li>Often solitary</li>
-                <li>Earlier age of WT development</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="info-box fragment" style="margin-top:0.8em">
-          <i class="fas fa-eye" style="color:var(--teal)"></i> <strong>Management:</strong> Nephroblastomatosis (diffuse/multifocal rests) &rarr; chemotherapy to prevent malignant transformation. Close surveillance with serial imaging for isolated rests.
-        </div>
-      </section>
-
-      <!-- ============ QUIZ 3 ============ -->
-      <section>
-        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Knowledge Check #3</h2>
-        <div class="quiz-container" id="quiz3">
-          <div class="quiz-question">A 2-month-old boy presents with a palpable abdominal mass. Ultrasound reveals a solid renal tumor. What is the most likely diagnosis?</div>
-          <div class="quiz-options">
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz3')">
-              <div class="option-letter">A</div>
-              <div>Wilms tumor</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz3')">
-              <div class="option-letter">B</div>
-              <div>Renal cell carcinoma</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, true, 'quiz3')">
-              <div class="option-letter">C</div>
-              <div>Congenital mesoblastic nephroma</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz3')">
-              <div class="option-letter">D</div>
-              <div>Clear cell sarcoma</div>
-            </div>
-          </div>
-          <div class="quiz-feedback" id="quiz3-feedback"></div>
-        </div>
-      </section>
-
-      <!-- ============ QUIZ 4 ============ -->
-      <section>
-        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Knowledge Check #4</h2>
-        <div class="quiz-container" id="quiz4">
-          <div class="quiz-question">A child with a renal mass is found to have bone metastases. Which renal tumor is most associated with osseous spread?</div>
-          <div class="quiz-options">
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz4')">
-              <div class="option-letter">A</div>
-              <div>Wilms tumor (favorable histology)</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, true, 'quiz4')">
-              <div class="option-letter">B</div>
-              <div>Clear cell sarcoma of the kidney</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz4')">
-              <div class="option-letter">C</div>
-              <div>Congenital mesoblastic nephroma</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz4')">
-              <div class="option-letter">D</div>
-              <div>Renal cell carcinoma</div>
-            </div>
-          </div>
-          <div class="quiz-feedback" id="quiz4-feedback"></div>
-        </div>
-      </section>
-
-      <!-- ============ QUIZ 5 ============ -->
-      <section>
-        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Knowledge Check #5</h2>
-        <div class="quiz-container" id="quiz5">
-          <div class="quiz-question">Which molecular alteration is characteristically associated with rhabdoid tumor of the kidney?</div>
-          <div class="quiz-options">
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz5')">
-              <div class="option-letter">A</div>
-              <div>WT1 mutation</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz5')">
-              <div class="option-letter">B</div>
-              <div>BCOR internal tandem duplication</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, true, 'quiz5')">
-              <div class="option-letter">C</div>
-              <div>SMARCB1/INI1 loss</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz5')">
-              <div class="option-letter">D</div>
-              <div>ETV6-NTRK3 fusion</div>
-            </div>
-          </div>
-          <div class="quiz-feedback" id="quiz5-feedback"></div>
-        </div>
-      </section>
-
-      <!-- ============ SECTION: LONG TERM ============ -->
-      <section class="section-divider" data-background-gradient="radial-gradient(ellipse at center, #0f2744, #0a1628)">
-        <div class="section-number">03</div>
-        <span class="tag tag-amber">SURVIVORSHIP</span>
-        <h2>Long-Term Outcomes<br>&amp; Late Effects</h2>
-      </section>
-
-      <!-- Late Effects -->
-      <section>
-        <h2>Late Effects of Multimodal Therapy</h2>
-        <div class="three-col" style="font-size:0.8em">
-          <div>
-            <h3 style="color:var(--teal)"><i class="fas fa-pills"></i> Chemotherapy</h3>
-            <div class="stat-card fragment" style="text-align:left; padding:14px">
-              <strong>Doxorubicin:</strong>
-              <ul class="small">
-                <li>Dose-dependent cardiotoxicity</li>
-                <li>Echo monitoring required</li>
-                <li>Young age &amp; female = higher risk</li>
-              </ul>
-            </div>
-            <div class="stat-card fragment" style="text-align:left; padding:14px; margin-top:10px">
-              <strong>Cyclophosphamide:</strong>
-              <ul class="small">
-                <li>Gonadal toxicity (&gt;4 g/m&sup2;)</li>
-                <li>Oligospermia/azoospermia</li>
-                <li>Bladder malignancy risk</li>
-                <li><span class="highlight-amber">Fertility counseling mandatory</span></li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <h3 style="color:var(--amber)"><i class="fas fa-radiation"></i> Radiation</h3>
-            <div class="stat-card fragment" style="text-align:left; padding:14px">
-              <strong>Abdominal:</strong>
-              <ul class="small">
-                <li>Bowel obstruction</li>
-                <li>Diabetes mellitus</li>
-                <li>Colorectal cancer</li>
-                <li>Hepatic toxicity</li>
-              </ul>
-            </div>
-            <div class="stat-card fragment" style="text-align:left; padding:14px; margin-top:10px">
-              <strong>Pelvic:</strong>
-              <ul class="small">
-                <li>Ovarian failure</li>
-                <li>Diminished ovarian reserve</li>
-                <li>Uterine vascular insufficiency</li>
-                <li>Bladder malignancy</li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <h3 style="color:var(--rose)"><i class="fas fa-heartbeat"></i> Surgery</h3>
-            <div class="stat-card fragment" style="text-align:left; padding:14px">
-              <strong>Nephrectomy:</strong>
-              <ul class="small">
-                <li>AKI in 71% during therapy</li>
-                <li>CKD in 11&ndash;13% of survivors</li>
-                <li>Hypertension risk</li>
-                <li>Proteinuria in &gt;10%</li>
-              </ul>
-            </div>
-            <div class="stat-card fragment" style="text-align:left; padding:14px; margin-top:10px">
-              <strong>30&ndash;50 Year Mortality:</strong>
-              <ul class="small">
-                <li>75% excess deaths from:</li>
-                <li><span class="highlight-rose">50% second malignancies</span><br>(bowel, breast cancers)</li>
-                <li><span class="highlight-rose">25% cardiac disease</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============ QUIZ 6 ============ -->
-      <section>
-        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Knowledge Check #6</h2>
-        <div class="quiz-container" id="quiz6">
-          <div class="quiz-question">A child with WAGR syndrome is being followed with surveillance. How often should screening ultrasounds be performed, and until what age?</div>
-          <div class="quiz-options">
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz6')">
-              <div class="option-letter">A</div>
-              <div>Every 6 months until age 5</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, true, 'quiz6')">
-              <div class="option-letter">B</div>
-              <div>Every 3 months until age 7</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz6')">
-              <div class="option-letter">C</div>
-              <div>Every 12 months until age 10</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz6')">
-              <div class="option-letter">D</div>
-              <div>Every 3 months until age 4</div>
-            </div>
-          </div>
-          <div class="quiz-feedback" id="quiz6-feedback"></div>
-        </div>
-      </section>
-
-      <!-- ============ QUIZ 7 ============ -->
-      <section>
-        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Knowledge Check #7</h2>
-        <div class="quiz-container" id="quiz7">
-          <div class="quiz-question">What is the most significant risk factor for surgical complications during Wilms tumor nephrectomy?</div>
-          <div class="quiz-options">
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz7')">
-              <div class="option-letter">A</div>
-              <div>Tumor size greater than 10 cm</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz7')">
-              <div class="option-letter">B</div>
-              <div>IVC tumor thrombus extension</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, true, 'quiz7')">
-              <div class="option-letter">C</div>
-              <div>General surgeon performing the nephrectomy (vs. pediatric surgeon)</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz7')">
-              <div class="option-letter">D</div>
-              <div>Bilateral disease</div>
-            </div>
-          </div>
-          <div class="quiz-feedback" id="quiz7-feedback"></div>
-        </div>
-      </section>
-
-      <!-- ============ QUIZ 8 ============ -->
-      <section>
-        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Knowledge Check #8</h2>
-        <div class="quiz-container" id="quiz8">
+        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Question 9</h2>
+        <div class="quiz-container" id="q9">
           <div class="quiz-question">The most common histological subtype of renal cell carcinoma in children is:</div>
           <div class="quiz-options">
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz8')">
-              <div class="option-letter">A</div>
-              <div>Clear cell RCC</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, true, 'quiz8')">
-              <div class="option-letter">B</div>
-              <div>Translocation-type (MiT-RCC)</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz8')">
-              <div class="option-letter">C</div>
-              <div>Papillary RCC</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz8')">
-              <div class="option-letter">D</div>
-              <div>Chromophobe RCC</div>
-            </div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q9')"><div class="option-letter">A</div><div>Clear cell RCC (predominant in adults)</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, true, 'q9')"><div class="option-letter">B</div><div>Translocation-type RCC (MiT-RCC, TFE3/TFEB)</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q9')"><div class="option-letter">C</div><div>Papillary RCC</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q9')"><div class="option-letter">D</div><div>Chromophobe RCC</div></div>
           </div>
-          <div class="quiz-feedback" id="quiz8-feedback"></div>
+          <div class="quiz-feedback" id="q9-feedback"></div>
         </div>
+        <aside class="notes">In children, MiT-RCC (TFE3/TFEB translocation type) accounts for 36-56% — the most common pediatric subtype. This is a key difference from adults where clear cell predominates at ~70%. MiT-RCC involves translocations at Xp11.2 (TFE3) or 6p21 (TFEB). Diagnosis: nuclear TFE3 IHC or FISH.</aside>
       </section>
 
-      <!-- ============ QUIZ 9 ============ -->
+      <!-- TEACH 9: Pediatric RCC -->
       <section>
-        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Knowledge Check #9</h2>
-        <div class="quiz-container" id="quiz9">
-          <div class="quiz-question">Diffuse anaplasia in Wilms tumor is associated with mutations in which gene?</div>
-          <div class="quiz-options">
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz9')">
-              <div class="option-letter">A</div>
-              <div>WT1</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz9')">
-              <div class="option-letter">B</div>
-              <div>CTNNB1</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, true, 'quiz9')">
-              <div class="option-letter">C</div>
-              <div>TP53</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz9')">
-              <div class="option-letter">D</div>
-              <div>SMARCB1</div>
-            </div>
-          </div>
-          <div class="quiz-feedback" id="quiz9-feedback"></div>
-        </div>
-      </section>
-
-      <!-- ============ QUIZ 10 ============ -->
-      <section>
-        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Knowledge Check #10</h2>
-        <div class="quiz-container" id="quiz10">
-          <div class="quiz-question">During Wilms tumor nephrectomy, what is the recommended minimum number of lymph nodes to sample?</div>
-          <div class="quiz-options">
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz10')">
-              <div class="option-letter">A</div>
-              <div>3 nodes</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, true, 'quiz10')">
-              <div class="option-letter">B</div>
-              <div>5 nodes</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz10')">
-              <div class="option-letter">C</div>
-              <div>7 nodes</div>
-            </div>
-            <div class="quiz-option" onclick="checkAnswer(this, false, 'quiz10')">
-              <div class="option-letter">D</div>
-              <div>12 nodes</div>
-            </div>
-          </div>
-          <div class="quiz-feedback" id="quiz10-feedback"></div>
-        </div>
-      </section>
-
-      <!-- ============ SECTION: ADVANCES ============ -->
-      <section class="section-divider" data-background-gradient="radial-gradient(ellipse at center, #0f2744, #0a1628)">
-        <div class="section-number">04</div>
-        <span class="tag tag-purple">CUTTING EDGE</span>
-        <h2>Recent Advances &amp;<br>Future Directions</h2>
-      </section>
-
-      <!-- Molecular Risk Stratification -->
-      <section>
-        <h2>Evolving Molecular Risk Stratification</h2>
-        <div class="badge"><i class="fas fa-flask"></i> COG AREN2231</div>
+        <h2>Pediatric Renal Cell Carcinoma</h2>
         <div class="two-col">
           <div>
-            <h3>COG AREN2231 Trial (Open)</h3>
             <ul class="small">
-              <li class="fragment"><strong>Next-generation</strong> COG trial for favorable histology WT</li>
-              <li class="fragment">Expanded molecular integration:
-                <ul>
-                  <li>LOH 11p15 (very low risk determination)</li>
-                  <li>Combined LOH 1p + 16q</li>
-                  <li>1q gain</li>
-                  <li>Post-chemo histological response</li>
-                </ul>
-              </li>
-              <li class="fragment"><strong>Modified Very Low Risk (mVLR):</strong> Nephrectomy-only if ZERO adverse biomarkers</li>
+              <li>2&ndash;6% of pediatric renal tumors; mean age <span class="highlight">9&ndash;15 years</span></li>
+              <li>Incidence increasing: +3.7%/year</li>
+              <li>20% present with metastases</li>
             </ul>
+            <table style="margin-top:0.5em">
+              <thead><tr><th>Subtype</th><th>Pediatric</th><th>Adult</th></tr></thead>
+              <tbody>
+                <tr><td><strong>MiT-RCC</strong></td><td class="highlight">36&ndash;56%</td><td>Rare</td></tr>
+                <tr><td>Papillary</td><td>20&ndash;30%</td><td>~15%</td></tr>
+                <tr><td>Clear cell</td><td>6&ndash;23%</td><td class="highlight-rose">~70%</td></tr>
+              </tbody>
+            </table>
           </div>
           <div>
-            <h3>Novel Molecular Targets</h3>
-            <div class="timeline">
-              <div class="timeline-item fragment">
-                <div class="timeline-title">DROSHA / DGCR8</div>
-                <div class="timeline-desc">miRNA microprocessor mutations &mdash; found in high-risk blastemal WT</div>
-              </div>
-              <div class="timeline-item fragment">
-                <div class="timeline-title">SIX1 / SIX2</div>
-                <div class="timeline-desc">Transcription factor mutations + miRNA pathway = worse outcomes</div>
-              </div>
-              <div class="timeline-item fragment">
-                <div class="timeline-title">MYCN amplification</div>
-                <div class="timeline-desc">Associated with aggressive disease phenotype</div>
-              </div>
-              <div class="timeline-item fragment">
-                <div class="timeline-title">Circulating Tumor DNA</div>
-                <div class="timeline-desc">COG AREN17B1-Q: detecting 1q gain and LOH from ctDNA &mdash; non-invasive monitoring</div>
-              </div>
+            <div class="info-box">
+              <strong>Treatment:</strong> Surgery is curative for localized disease. Even N1M0 achieves 87% 4-yr OS <strong>without</strong> adjuvant therapy.
+            </div>
+            <div class="info-box">
+              <strong>Metastatic:</strong> Sunitinib (TKI) per SIOP UMBRELLA. Also: axitinib, cabozantinib, nivolumab.
+            </div>
+            <div style="font-size:0.8em; margin-top:0.8em">
+              <div style="display:flex;justify-content:space-between"><span>Localized</span><span class="highlight-emerald">96.8%</span></div>
+              <div class="score-bar"><div class="score-bar-fill excellent" style="width:97%"></div></div>
+              <div style="display:flex;justify-content:space-between;margin-top:0.3em"><span>Metastatic</span><span class="highlight-rose">45.6%</span></div>
+              <div class="score-bar"><div class="score-bar-fill poor" style="width:46%"></div></div>
             </div>
           </div>
         </div>
+        <aside class="notes">Pediatric RCC is fundamentally different from adult RCC — different histology, different biology. MiT-RCC (TFE3/TFEB fusions) is the most common subtype in children at 36-56%, while clear cell dominates in adults at 70%. Surgery is the cornerstone — complete resection is curative. Even lymph node-positive disease does well without adjuvant therapy (87% 4-yr OS). RCC is notoriously chemoresistant. For metastatic/unresectable: sunitinib is the recommended TKI. Localized disease has excellent outcomes at 96.8%, but metastatic drops to 45.6%. New 2024-2025 research: targeting PPARGC1A-mediated mitochondrial respiration as a novel approach specifically for translocation RCC.</aside>
       </section>
 
-      <!-- Targeted Therapies -->
+      <!-- ========================================== -->
+      <!-- BLOCK 10: Lymph Nodes -->
+      <!-- ========================================== -->
       <section>
-        <h2>Emerging Targeted &amp; Immunotherapies</h2>
-        <table style="font-size:0.65em">
-          <thead>
-            <tr><th>Target / Pathway</th><th>Agent</th><th>Tumor</th><th>Status</th></tr>
-          </thead>
+        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Question 10</h2>
+        <div class="quiz-container" id="q10">
+          <div class="quiz-question">During Wilms tumor nephrectomy, what is the minimum number of lymph nodes that should be sampled per COG/NCCN guidelines?</div>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q10')"><div class="option-letter">A</div><div>3 nodes</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, true, 'q10')"><div class="option-letter">B</div><div>5 nodes</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q10')"><div class="option-letter">C</div><div>7 nodes</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q10')"><div class="option-letter">D</div><div>12 nodes</div></div>
+          </div>
+          <div class="quiz-feedback" id="q10-feedback"></div>
+        </div>
+        <aside class="notes">Per COG/NCCN: minimum 5 lymph nodes from renal hilum, pericaval, and para-aortic regions. Failure to adequately sample can under-stage the patient. Inadequate lymph node sampling may effectively upstage to Stage III.</aside>
+      </section>
+
+      <!-- TEACH 10: Outcomes -->
+      <section>
+        <h2>Outcomes: The Numbers That Matter</h2>
+        <div class="two-col">
+          <div>
+            <h3>Favorable Histology (5-yr OS)</h3>
+            <div style="font-size:0.85em">
+              <div style="margin:0.3em 0"><div style="display:flex;justify-content:space-between"><span>Stage I</span><span class="highlight-emerald">96&ndash;97%</span></div><div class="score-bar"><div class="score-bar-fill excellent" style="width:97%"></div></div></div>
+              <div style="margin:0.3em 0"><div style="display:flex;justify-content:space-between"><span>Stage II</span><span class="highlight-emerald">93&ndash;94%</span></div><div class="score-bar"><div class="score-bar-fill excellent" style="width:94%"></div></div></div>
+              <div style="margin:0.3em 0"><div style="display:flex;justify-content:space-between"><span>Stage III</span><span class="highlight-amber">85&ndash;92%</span></div><div class="score-bar"><div class="score-bar-fill good" style="width:89%"></div></div></div>
+              <div style="margin:0.3em 0"><div style="display:flex;justify-content:space-between"><span>Stage IV</span><span class="highlight-amber">84&ndash;89%</span></div><div class="score-bar"><div class="score-bar-fill good" style="width:87%"></div></div></div>
+              <div style="margin:0.3em 0"><div style="display:flex;justify-content:space-between"><span>Stage IV Diffuse Anaplasia</span><span class="highlight-rose">29&ndash;45%</span></div><div class="score-bar"><div class="score-bar-fill poor" style="width:37%"></div></div></div>
+            </div>
+          </div>
+          <div>
+            <h3>Long-Term Survivorship</h3>
+            <div class="warning-box">
+              <strong>30&ndash;50 Year Mortality Data:</strong><br>
+              75% of excess deaths from:<br>
+              &bull; <span class="highlight-rose">50% second malignancies</span> (bowel, breast)<br>
+              &bull; <span class="highlight-rose">25% cardiac disease</span><br>
+              Cumulative death risk: 5.4% at 30yr &rarr; 22.7% at 50yr
+            </div>
+            <div class="pearl-box">
+              <i class="fas fa-gem key-icon"></i> <strong>Late Effects by Regimen:</strong><br>
+              EE4A: neuropathy only<br>
+              DD4A: + cardiotoxicity<br>
+              Regimen M: + gonadal toxicity, infertility<br>
+              Radiation: second cancers, growth impairment
+            </div>
+          </div>
+        </div>
+        <aside class="notes">Favorable histology outcomes are excellent across all stages. Even Stage IV FHWT achieves 84-89% — a triumph of multimodal therapy. But diffuse anaplasia Stage IV at 29-45% shows the limits of current treatment. Long-term data is sobering: at 30-50 years, 75% of excess deaths are from second cancers (50%) and cardiac disease (25%). This is why treatment de-escalation for low-risk patients is so critical. Doxorubicin cardiotoxicity is dose-dependent — younger children and females more susceptible. Cyclophosphamide causes gonadal toxicity above 4 g/m². Fertility counseling mandatory before regimens M, I, UH-1, UH-2. All survivors need individualized long-term follow-up per COG LTFU guidelines.</aside>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- BLOCK 11: Molecular -->
+      <!-- ========================================== -->
+      <section>
+        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Question 11</h2>
+        <div class="quiz-container" id="q11">
+          <div class="quiz-question">Which molecular alteration is characteristically associated with rhabdoid tumor of the kidney?</div>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q11')"><div class="option-letter">A</div><div>ETV6-NTRK3 fusion</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q11')"><div class="option-letter">B</div><div>BCOR internal tandem duplication</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, true, 'q11')"><div class="option-letter">C</div><div>SMARCB1/INI1 loss (22q11.2)</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q11')"><div class="option-letter">D</div><div>TFE3 translocation (Xp11.2)</div></div>
+          </div>
+          <div class="quiz-feedback" id="q11-feedback"></div>
+        </div>
+        <aside class="notes">SMARCB1/INI1 loss at 22q11.2 is the hallmark of rhabdoid tumor. ETV6-NTRK3 = cellular CMN. BCOR ITD = clear cell sarcoma. TFE3 = translocation RCC. This is a molecular matching question — know which mutation goes with which tumor.</aside>
+      </section>
+
+      <!-- TEACH 11: Molecular Match + Targeted Therapies -->
+      <section>
+        <h2>Molecular Signatures &amp; Emerging Therapies</h2>
+        <table style="font-size:0.62em">
+          <thead><tr><th>Tumor</th><th>Key Molecular Feature</th><th>Targeted Therapy</th><th>Status</th></tr></thead>
           <tbody>
-            <tr class="fragment">
-              <td><strong>NTRK fusions</strong></td>
-              <td><span class="highlight">Larotrectinib / Entrectinib</span></td>
-              <td>Cellular CMN</td>
-              <td><span class="tag tag-emerald">FDA-approved (tumor-agnostic)</span></td>
-            </tr>
-            <tr class="fragment">
-              <td><strong>EZH2</strong> (SMARCB1-loss)</td>
-              <td><span class="highlight">Tazemetostat</span></td>
-              <td>Rhabdoid tumor</td>
-              <td><span class="tag tag-amber">Phase I &mdash; disease stabilization</span></td>
-            </tr>
-            <tr class="fragment">
-              <td><strong>VEGFR/TKI</strong></td>
-              <td>Sunitinib, Cabozantinib</td>
-              <td>Pediatric RCC</td>
-              <td><span class="tag tag-teal">SIOP-RTSG UMBRELLA</span></td>
-            </tr>
-            <tr class="fragment">
-              <td><strong>IGF2 / IGF1R</strong></td>
-              <td>Anti-IGF1R antibodies</td>
-              <td>Wilms tumor</td>
-              <td><span class="tag tag-purple">Preclinical</span></td>
-            </tr>
-            <tr class="fragment">
-              <td><strong>PI3K/AKT/mTOR</strong></td>
-              <td>ZSTK474</td>
-              <td>Wilms tumor</td>
-              <td><span class="tag tag-purple">Preclinical</span></td>
-            </tr>
-            <tr class="fragment">
-              <td><strong>WT1-targeted</strong></td>
-              <td>CAR-T cells / CTLs</td>
-              <td>Wilms tumor</td>
-              <td><span class="tag tag-amber">Phase I trials</span></td>
-            </tr>
-            <tr class="fragment">
-              <td><strong>PD-1 + VEGFR</strong></td>
-              <td>Pembrolizumab + Lenvatinib</td>
-              <td>Renal medullary carcinoma</td>
-              <td><span class="tag tag-amber">Dramatic responses reported</span></td>
-            </tr>
+            <tr><td><strong>Wilms (FHWT)</strong></td><td>WT1, WT2, CTNNB1, 1q gain, LOH 1p/16q</td><td>WT1 CAR-T cells</td><td><span class="tag tag-purple">Phase I</span></td></tr>
+            <tr><td><strong>Wilms (anaplastic)</strong></td><td>TP53 mutations</td><td>Intensive chemo (UH-2)</td><td><span class="tag tag-teal">Standard</span></td></tr>
+            <tr><td><strong>CMN (cellular)</strong></td><td>ETV6-NTRK3 fusion</td><td><span class="highlight">Larotrectinib / Entrectinib</span></td><td><span class="tag tag-emerald">FDA-approved</span></td></tr>
+            <tr><td><strong>Clear cell sarcoma</strong></td><td>BCOR ITD (85%)</td><td>Intensive chemo + RT</td><td><span class="tag tag-teal">Standard</span></td></tr>
+            <tr><td><strong>Rhabdoid tumor</strong></td><td>SMARCB1/INI1 loss</td><td><span class="highlight">Tazemetostat</span> (EZH2 inhibitor)</td><td><span class="tag tag-amber">Phase I</span></td></tr>
+            <tr><td><strong>Pediatric RCC</strong></td><td>TFE3/TFEB fusions</td><td>Sunitinib, Cabozantinib</td><td><span class="tag tag-teal">SIOP UMBRELLA</span></td></tr>
           </tbody>
         </table>
-        <div class="pearl-box fragment" style="margin-top:0.5em">
-          <i class="fas fa-gem key-icon"></i> <strong>2024 Discovery:</strong> Variants in <strong>ALPK2, C16orf96, PRKDC, and SVIL</strong> identified via exome sequencing as strongly correlated with chemoresistance in advanced-stage Wilms tumor.
+        <div class="two-col" style="margin-top:0.5em">
+          <div class="info-box">
+            <strong>COG AREN2231 (Current):</strong> Expanded molecular risk stratification integrating LOH 11p15, LOH 1p/16q, 1q gain. Modified Very Low Risk = nephrectomy only if zero adverse biomarkers.
+          </div>
+          <div class="info-box">
+            <strong>Circulating Tumor DNA:</strong> COG studies detecting 1q gain and LOH from blood draws — non-invasive molecular monitoring and early relapse detection.
+          </div>
         </div>
+        <aside class="notes">This is the future of pediatric renal oncology — molecular-driven precision therapy. Each tumor has its molecular fingerprint: WT1/CTNNB1 for Wilms, ETV6-NTRK3 for cellular CMN, BCOR ITD for CCSK, SMARCB1 loss for rhabdoid, TFE3/TFEB for pediatric RCC. TRK inhibitors (larotrectinib, entrectinib) are FDA-approved tumor-agnostic and show dramatic responses in NTRK fusion-positive cellular CMN. Tazemetostat targets EZH2 dependency created by SMARCB1 loss in rhabdoid tumors. WT1 CAR-T cells in Phase I for Wilms. Circulating tumor DNA is the next frontier — detecting molecular markers from blood draws without needing tumor tissue. The AREN2231 trial is expanding molecular stratification to personalize treatment intensity.</aside>
       </section>
 
-      <!-- Imaging Differential -->
+      <!-- ========================================== -->
+      <!-- BLOCK 12: Imaging Differential -->
+      <!-- ========================================== -->
       <section>
-        <h2>Imaging: Key Differential Clues</h2>
+        <h2><i class="fas fa-question-circle" style="color:var(--purple)"></i> Question 12</h2>
+        <div class="quiz-container" id="q12">
+          <div class="quiz-question">An infant under 1 year has a renal mass with a subcapsular fluid collection on CT and a synchronous brain mass. Which diagnosis must you consider?</div>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q12')"><div class="option-letter">A</div><div>Wilms tumor with brain metastasis</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, true, 'q12')"><div class="option-letter">B</div><div>Malignant rhabdoid tumor with synchronous AT/RT</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q12')"><div class="option-letter">C</div><div>Clear cell sarcoma with brain metastasis</div></div>
+            <div class="quiz-option" onclick="checkAnswer(this, false, 'q12')"><div class="option-letter">D</div><div>Congenital mesoblastic nephroma with metastasis</div></div>
+          </div>
+          <div class="quiz-feedback" id="q12-feedback"></div>
+        </div>
+        <aside class="notes">Infant + renal mass + subcapsular fluid + brain mass = rhabdoid tumor with synchronous AT/RT. SMARCB1/INI1 loss drives both the renal and CNS tumors. Subcapsular fluid collection is a characteristic imaging finding for rhabdoid tumor. Brain MRI is mandatory at diagnosis. Wilms rarely metastasizes to brain. CCSK goes to bone preferentially. CMN rarely metastasizes at all.</aside>
+      </section>
+
+      <!-- TEACH 12: Imaging Summary -->
+      <section>
+        <h2>Imaging: Quick Differential Guide</h2>
         <table style="font-size:0.65em">
-          <thead>
-            <tr><th>Finding</th><th>Suggests</th><th>Key Feature</th></tr>
-          </thead>
+          <thead><tr><th>Clinical Scenario</th><th>Most Likely Diagnosis</th><th>Key Imaging Finding</th></tr></thead>
           <tbody>
-            <tr class="fragment">
-              <td><i class="fas fa-baby" style="color:var(--emerald)"></i> Neonatal solid renal mass</td>
-              <td><strong>Mesoblastic nephroma</strong></td>
-              <td>"Ring sign" on US, "double-layer sign" on CT</td>
-            </tr>
-            <tr class="fragment">
-              <td><i class="fas fa-child" style="color:var(--teal)"></i> Child + "claw sign" + no calc</td>
-              <td><strong>Wilms tumor</strong></td>
-              <td>Heterogeneous, well-circumscribed, 9% calcification</td>
-            </tr>
-            <tr class="fragment">
-              <td><i class="fas fa-bone" style="color:var(--amber)"></i> Renal mass + bone metastases</td>
-              <td><strong>Clear cell sarcoma</strong></td>
-              <td>Homogeneous, limited diffusion restriction</td>
-            </tr>
-            <tr class="fragment">
-              <td><i class="fas fa-brain" style="color:var(--rose)"></i> Renal mass + subcapsular fluid + brain mass</td>
-              <td><strong>Rhabdoid tumor</strong></td>
-              <td>Curvilinear calcifications, central location</td>
-            </tr>
-            <tr class="fragment">
-              <td><i class="fas fa-user" style="color:var(--purple)"></i> Adolescent + solid enhancing mass</td>
-              <td><strong>RCC</strong></td>
-              <td>25% calcification, older age group</td>
-            </tr>
-            <tr class="fragment">
-              <td><i class="fas fa-exclamation-triangle" style="color:var(--slate)"></i> Crosses midline, encases vessels, 80%+ calc</td>
-              <td><strong>Neuroblastoma</strong> (adrenal!)</td>
-              <td>NOT renal origin &mdash; key differential</td>
-            </tr>
+            <tr><td>Neonate + solid renal mass</td><td><strong>CMN</strong></td><td>"Ring sign" on US, "double-layer sign" on CT</td></tr>
+            <tr><td>Child 1-5yr + "claw sign" + no calc</td><td><strong>Wilms tumor</strong></td><td>Heterogeneous, well-circumscribed, 9% calc</td></tr>
+            <tr><td>Renal mass + bone metastases</td><td><strong>Clear cell sarcoma</strong></td><td>Homogeneous, get bone scan</td></tr>
+            <tr><td>Infant + renal mass + subcapsular fluid + brain</td><td><strong>Rhabdoid tumor</strong></td><td>Curvilinear calcifications, get brain MRI</td></tr>
+            <tr><td>Adolescent + solid enhancing renal mass</td><td><strong>RCC</strong></td><td>25% calcification, older age</td></tr>
+            <tr><td>Crosses midline, encases vessels, 80%+ calc</td><td><strong>Neuroblastoma (adrenal!)</strong></td><td>NOT renal — urine catecholamines</td></tr>
           </tbody>
         </table>
-        <div class="info-box fragment" style="margin-top:0.5em">
-          <i class="fas fa-search" style="color:var(--teal)"></i> <strong>Always assess:</strong> IVC/renal vein tumor thrombus (4&ndash;10% of WT), contralateral kidney, lung metastases on chest CT. MRI superior for thrombus evaluation.
+        <div class="pearl-box" style="margin-top:0.8em">
+          <i class="fas fa-gem key-icon"></i> <strong>Always assess:</strong> IVC/renal vein thrombus (4-10% of WT, MRI is gold standard), contralateral kidney (bilateral in 5-7%), chest CT for lung mets. Initial workup: US &rarr; CT/MRI abdomen &rarr; chest CT &rarr; urine catecholamines &rarr; labs (CBC, CMP, coags, UA).
         </div>
+        <aside class="notes">This table is your rapid-fire differential guide. The key is pattern recognition: age + imaging features = most likely diagnosis. Each tumor has its signature: CMN = ring sign in neonate. Wilms = claw sign in toddler with no calcification. CCSK = bone mets (23%). Rhabdoid = subcapsular fluid + brain mass in infant. RCC = enhancing mass in adolescent. Neuroblastoma = the big differential, but it's NOT renal (adrenal/paraspinal), crosses midline, heavy calcification. Always check urine catecholamines to rule out neuroblastoma.</aside>
       </section>
 
-      <!-- ============ COMPARISON INFOGRAPHIC ============ -->
+      <!-- ===== COMPARISON INFOGRAPHIC ===== -->
       <section>
-        <h2>The Big Three: At a Glance</h2>
+        <h2>The Big Three: Summary</h2>
         <div class="img-container">
           <img src="assets/img/comparison-overview.png" alt="Pediatric Renal Masses: A Clinical Comparison">
         </div>
+        <aside class="notes">This infographic summarizes the three most common pediatric renal tumors side by side. Use this as a visual anchor for the key differences in age, presentation, and outcomes.</aside>
       </section>
 
-      <!-- ============ COMPREHENSIVE COMPARISON TABLE ============ -->
+      <!-- ===== COMPREHENSIVE TABLE ===== -->
       <section>
-        <h2>Comprehensive Comparison</h2>
-        <table style="font-size:0.6em">
-          <thead>
-            <tr><th>Feature</th><th style="color:var(--teal)">Wilms Tumor</th><th style="color:var(--emerald)">CMN</th><th style="color:var(--purple)">RCC</th><th style="color:var(--amber)">CCSK</th><th style="color:var(--rose)">MRTK</th></tr>
-          </thead>
+        <h2>Complete Comparison Table</h2>
+        <table style="font-size:0.58em">
+          <thead><tr><th>Feature</th><th style="color:var(--teal)">Wilms</th><th style="color:var(--emerald)">CMN</th><th style="color:var(--purple)">RCC</th><th style="color:var(--amber)">CCSK</th><th style="color:var(--rose)">MRTK</th></tr></thead>
           <tbody>
-            <tr><td><strong>Peak Age</strong></td><td>1&ndash;5 years</td><td>&lt;3 months</td><td>9&ndash;15 years</td><td>1&ndash;4 years</td><td>&lt;1 year</td></tr>
-            <tr><td><strong>% of Pediatric Renal</strong></td><td>>90%</td><td>3&ndash;10%</td><td>2&ndash;6%</td><td>3&ndash;5%</td><td>1&ndash;2%</td></tr>
-            <tr><td><strong>Key Genetics</strong></td><td>WT1, WT2, CTNNB1</td><td>ETV6-NTRK3, EGFR ITD</td><td>TFE3/TFEB fusions</td><td>BCOR ITD</td><td>SMARCB1/INI1 loss</td></tr>
-            <tr><td><strong>Mets Pattern</strong></td><td>Lung &gt; liver</td><td>Rare</td><td>Lung, bone, liver</td><td><strong>Bone</strong> (23%)</td><td>Brain (AT/RT)</td></tr>
-            <tr><td><strong>Primary Rx</strong></td><td>Surgery + chemo &plusmn; RT</td><td>Surgery alone</td><td>Surgery &plusmn; TKI</td><td>Surgery + chemo + RT</td><td>Multimodal (poor)</td></tr>
-            <tr><td><strong>5-Year OS</strong></td><td>&gt;90%</td><td>96&ndash;100%</td><td>84.8%</td><td>~75%</td><td>~25%</td></tr>
+            <tr><td><strong>Peak Age</strong></td><td>1&ndash;5 yr</td><td>&lt;3 mo</td><td>9&ndash;15 yr</td><td>2&ndash;4 yr</td><td>&lt;1 yr</td></tr>
+            <tr><td><strong>% Pediatric Renal</strong></td><td>&gt;90%</td><td>3&ndash;10%</td><td>2&ndash;6%</td><td>3&ndash;5%</td><td>1&ndash;2%</td></tr>
+            <tr><td><strong>Key Genetics</strong></td><td>WT1, WT2, CTNNB1</td><td>ETV6-NTRK3, EGFR</td><td>TFE3/TFEB</td><td>BCOR ITD</td><td>SMARCB1 loss</td></tr>
+            <tr><td><strong>Metastasis</strong></td><td>Lung &gt; liver</td><td>Rare</td><td>Lung, bone</td><td><strong>Bone</strong> (23%)</td><td>Brain (AT/RT)</td></tr>
+            <tr><td><strong>Primary Rx</strong></td><td>Surgery + chemo &plusmn; RT</td><td>Surgery alone</td><td>Surgery &plusmn; TKI</td><td>Surgery + chemo + RT</td><td>Multimodal</td></tr>
+            <tr><td><strong>5-Year OS</strong></td><td>&gt;90%</td><td>96&ndash;100%</td><td>84.8%</td><td>~75%</td><td>~25-40%</td></tr>
           </tbody>
         </table>
+        <aside class="notes">This master comparison table should be committed to memory. Age, genetics, metastatic pattern, treatment, and survival for each tumor. CMN has the best prognosis (96-100%). Rhabdoid has the worst (~25-40%). Wilms is in between with >90% overall but subgroups that do poorly. Know which molecular marker goes with which tumor — this is increasingly tested on boards.</aside>
       </section>
 
-      <!-- ============ KEY TAKEAWAYS ============ -->
+      <!-- ===== KEY TAKEAWAYS ===== -->
       <section>
-        <h2><i class="fas fa-star" style="color:var(--amber)"></i> Key Takeaways</h2>
-        <div style="font-size:0.9em">
-          <div class="pearl-box fragment">
-            <strong>1.</strong> Wilms tumor is the most common pediatric renal tumor (&gt;90%). Most present as healthy children with painless abdominal mass between ages 1&ndash;5.
-          </div>
-          <div class="pearl-box fragment">
-            <strong>2.</strong> Age is your first filter: neonates &rarr; CMN, toddlers &rarr; Wilms, adolescents &rarr; RCC. Bone mets &rarr; CCSK. Brain + kidney tumor in infant &rarr; MRTK.
-          </div>
-          <div class="pearl-box fragment">
-            <strong>3.</strong> COG and SIOP represent equally valid approaches with comparable survival. Know both frameworks.
-          </div>
-          <div class="pearl-box fragment">
-            <strong>4.</strong> Molecular markers (1q gain, LOH 1p/16q, TP53) now drive treatment intensity decisions beyond stage and histology alone.
-          </div>
-          <div class="pearl-box fragment">
-            <strong>5.</strong> General surgeons performing nephrectomy = 9x complication rate. These cases require pediatric surgical expertise. Minimum 5 lymph nodes sampled.
-          </div>
-          <div class="pearl-box fragment">
-            <strong>6.</strong> Long-term survivor care is critical: 75% of excess deaths at 30&ndash;50 years from second cancers and cardiac disease.
-          </div>
-        </div>
+        <h2><i class="fas fa-star" style="color:var(--amber)"></i> Six Takeaways</h2>
+        <div class="pearl-box"><strong>1.</strong> Age is your first filter: Neonates &rarr; CMN | Toddlers &rarr; Wilms | Adolescents &rarr; RCC | Bone mets &rarr; CCSK | Brain + infant &rarr; MRTK</div>
+        <div class="pearl-box"><strong>2.</strong> Wilms tumor is >90% of pediatric renal tumors with >90% survival. Know COG staging cold — biopsy before removal = Stage III.</div>
+        <div class="pearl-box"><strong>3.</strong> COG vs SIOP: Both work. COG = surgery first (unaltered histology). SIOP = chemo first (0% rupture). Equal survival.</div>
+        <div class="pearl-box"><strong>4.</strong> General surgeon performing nephrectomy = 9x complications. Minimum 5 lymph nodes sampled. Transabdominal approach.</div>
+        <div class="pearl-box"><strong>5.</strong> Molecular markers (1q gain, LOH 1p/16q, TP53) now drive treatment decisions beyond stage and histology.</div>
+        <div class="pearl-box"><strong>6.</strong> Long-term survivors: 75% of excess deaths at 30-50 years from second cancers and cardiac disease. De-escalation matters.</div>
+        <aside class="notes">These are the six points you should take away from this presentation. If you remember nothing else, remember these. They cover the core knowledge needed for clinical practice and board examinations.</aside>
       </section>
 
-      <!-- ============ FINAL SCORE ============ -->
+      <!-- ===== FINAL SCORE ===== -->
       <section class="section-divider" data-background-gradient="radial-gradient(ellipse at center, #0f2744, #0a1628)">
-        <h2>Your Score</h2>
+        <h2>Your Final Score</h2>
         <div id="final-score" style="font-size:4em; font-weight:900; margin:0.3em 0">
-          <span id="final-correct">0</span>/<span id="final-total">10</span>
+          <span id="final-correct">0</span>/<span id="final-total">12</span>
         </div>
-        <div id="final-message" style="font-size:1.2em; color:var(--slate)">Complete the quizzes to see your score!</div>
+        <div id="final-message" style="font-size:1.2em; color:var(--slate)">Complete all 12 questions to see your score!</div>
         <div id="final-bar" style="max-width:400px; margin:1em auto">
           <div class="score-bar"><div class="score-bar-fill excellent" id="final-bar-fill" style="width:0%"></div></div>
         </div>
+        <aside class="notes">Review the final score with the audience. Discuss any questions that were commonly missed. Use this as a springboard for further discussion.</aside>
       </section>
 
-      <!-- ============ REFERENCES ============ -->
+      <!-- ===== REFERENCES ===== -->
       <section>
         <h2>Key References</h2>
-        <div style="font-size:0.5em; columns: 2; column-gap: 30px; line-height:1.8; color:var(--slate)">
-          <p>1. NCCN Clinical Practice Guidelines: Wilms Tumor (Nephroblastoma), Version 2.2025</p>
+        <div style="font-size:0.48em; columns:2; column-gap:25px; line-height:1.8; color:var(--slate)">
+          <p>1. NCCN Wilms Tumor (Nephroblastoma), Version 2.2025</p>
           <p>2. Espinoza AF, et al. Cancer Medicine. 2025;14(3):e70598</p>
           <p>3. Nakata K, et al. Int J Cancer. 2020;147(12):3313-3327</p>
           <p>4. Hol JA, et al. J Clin Oncol. 2022;40(17):1892-1902</p>
           <p>5. van der Beek JN, et al. Int J Cancer. 2021;148(11):2724-2735</p>
-          <p>6. Denize T, et al. Histopathology. 2022;80(6):928-945</p>
-          <p>7. Davick JJ, et al. Annals of Surgery. 2025</p>
-          <p>8. Geller JI, et al. Cancer. 2020;126(23):5156-5164</p>
-          <p>9. Sprokkerieft J, et al. Cancer Med. 2024;13(1):e6782</p>
-          <p>10. Ritchey ML, et al. J Am Coll Surg. 2001;192(1):63-8</p>
-          <p>11. Raymakers-Janssen PAMA, et al. Pediatr Nephrol. 2025;40(7):2393-2401</p>
-          <p>12. Ssenyonga N, et al. Pediatr Blood Cancer. 2026;:e70061</p>
-          <p>13. Vujani&#263; GM, et al. Int J Cancer. 2021;149(6):1332-1340</p>
-          <p>14. Wong KF, et al. J Clin Oncol. 2016;34(15):1772-9</p>
-          <p>15. COG Long-Term Follow-Up Guidelines. Hudson MM, et al. Pediatrics. 2021</p>
+          <p>6. Davick JJ, et al. Annals of Surgery. 2025</p>
+          <p>7. Geller JI, et al. Cancer. 2020;126(23):5156-5164</p>
+          <p>8. Ritchey ML, et al. J Am Coll Surg. 2001;192(1):63-8</p>
+          <p>9. Vujani&#263; GM, et al. Int J Cancer. 2021;149(6):1332-1340</p>
+          <p>10. Wong KF, et al. J Clin Oncol. 2016;34(15):1772-9</p>
+          <p>11. COG Blueprint for Research: Renal Tumors. PMC 2023</p>
+          <p>12. UMBRELLA SIOP-RTSG 2016. Nat Rev Urol. 2018</p>
+          <p>13. Sprokkerieft J, et al. Cancer Med. 2024;13(1):e6782</p>
+          <p>14. Raymakers-Janssen, et al. Pediatr Nephrol. 2025</p>
+          <p>15. Hudson MM, et al. Pediatrics. 2021;148(3)</p>
         </div>
       </section>
 
-      <!-- ============ CLOSING ============ -->
+      <!-- ===== CLOSING ===== -->
       <section class="title-slide" data-background-gradient="radial-gradient(ellipse at center, #0f2744, #0a1628)">
         <h1 style="font-size:2em">Thank You</h1>
         <div class="subtitle">Questions &amp; Discussion</div>
@@ -1978,6 +815,7 @@
           <span class="tag tag-teal"><i class="fab fa-youtube"></i> Surgucation</span>
           <span class="tag tag-purple"><i class="fas fa-globe"></i> surgucation.com</span>
         </div>
+        <aside class="notes">Thank everyone for their participation. Open the floor for questions and discussion. Encourage them to review any topics they found challenging and to use the presentation as a study reference — it's always available at the URL.</aside>
       </section>
 
     </div>
@@ -1985,86 +823,38 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
   <script>
-    // Initialize Reveal.js
     Reveal.initialize({
-      hash: true,
-      slideNumber: 'c/t',
-      progress: true,
-      controls: true,
-      controlsTutorial: true,
-      center: false,
-      transition: 'slide',
-      transitionSpeed: 'default',
-      backgroundTransition: 'fade',
-      width: 1280,
-      height: 720,
-      margin: 0.04,
-      minScale: 0.2,
-      maxScale: 2.0,
-      pdfSeparateFragments: false,
+      hash: true, slideNumber: 'c/t', progress: true, controls: true,
+      center: false, transition: 'slide', width: 1280, height: 720,
+      margin: 0.04, pdfSeparateFragments: false,
     });
 
-    // Quiz system
-    let score = 0;
-    let totalAnswered = 0;
-    const totalQuestions = 10;
+    let score = 0, totalAnswered = 0;
+    const totalQuestions = 12;
     const answered = {};
 
     const explanations = {
-      quiz1: {
-        correct: "Correct! A healthy-appearing child with a firm, non-tender abdominal mass, claw sign on CT, and minimal calcification is the classic presentation of Wilms tumor. Neuroblastoma patients are typically ill-appearing with 60-70% calcification.",
-        incorrect: "The answer is <strong>Wilms tumor</strong>. Key clues: healthy-appearing child (age 3), firm non-tender mass found incidentally, claw sign (intrarenal origin), no calcification. Neuroblastoma children appear ill with 60-70% calcification. CMN presents in infants <3 months. RCC typically presents in adolescents 9-15 years."
-      },
-      quiz2: {
-        correct: "Correct! Per COG staging, a tumor biopsied before removal is automatically Stage III, regardless of other findings. This is a commonly tested point!",
-        incorrect: "The answer is <strong>Stage III</strong>. Per COG criteria, Stage III includes: tumor biopsied before removal, lymph node involvement, peritoneal implants, tumor spillage, or tumor removed in more than one piece. Biopsy before removal automatically upgrades to Stage III."
-      },
-      quiz3: {
-        correct: "Correct! CMN is the most common renal tumor in infants under 3 months of age. At 2 months old, this is the most likely diagnosis. Wilms typically presents at 1-5 years.",
-        incorrect: "The answer is <strong>Congenital mesoblastic nephroma</strong>. CMN is the most common renal tumor in infants under 3 months (median age 1 month). Wilms tumor peaks at 1-5 years, RCC in adolescents 9-15 years, and clear cell sarcoma at 1-4 years."
-      },
-      quiz4: {
-        correct: "Correct! Clear cell sarcoma of the kidney is known as the 'bone-metastasizing renal tumor of childhood.' BCOR ITD is found in 85% of cases. Always get a bone scan!",
-        incorrect: "The answer is <strong>Clear cell sarcoma of the kidney</strong>. CCSK is known as the 'bone-metastasizing renal tumor of childhood' with 23% developing bone metastases (spine, pelvis, ribs). This is driven by BCOR internal tandem duplications found in 85% of cases."
-      },
-      quiz5: {
-        correct: "Correct! Rhabdoid tumors are characterized by SMARCB1/INI1 loss on chromosome 22q11.2. ~25% have synchronous brain tumors (AT/RT). Always get a brain MRI!",
-        incorrect: "The answer is <strong>SMARCB1/INI1 loss</strong> (chromosome 22q11.2). WT1 = Wilms tumor. BCOR ITD = clear cell sarcoma. ETV6-NTRK3 fusion = cellular CMN. SMARCB1/INI1 loss is the hallmark of rhabdoid tumor."
-      },
-      quiz6: {
-        correct: "Correct! Children with WAGR and other high-risk syndromes should have physical exam + renal US every 3 months until age 7. Rationale: 90-98% of tumors in these syndromes occur by age 7.",
-        incorrect: "The answer is <strong>every 3 months until age 7</strong>. Per NCCN guidelines, high-risk syndromes (WAGR, Denys-Drash, BWS) require Q3-month ultrasound surveillance until age 7, as 90-98% of WT in these patients occurs by this age."
-      },
-      quiz7: {
-        correct: "Correct! Having a general surgeon perform the nephrectomy vs. a pediatric surgeon carries an OR of 9.0 for complications — the single highest risk factor. This underscores the importance of pediatric surgical expertise.",
-        incorrect: "The answer is <strong>general surgeon performing the nephrectomy</strong> (OR 9.0). While IVC extension (OR 3.8), flank incision (OR 5.3), and tumor ≥10cm (OR 2.0) are all risk factors, the surgeon type carries the highest odds ratio at 9.0."
-      },
-      quiz8: {
-        correct: "Correct! MiT-RCC (TFE3/TFEB translocation type) accounts for 36-56% of pediatric RCC, unlike adults where clear cell predominates (~70%). This is a critical distinction.",
-        incorrect: "The answer is <strong>Translocation-type (MiT-RCC)</strong>. In children, MiT-RCC accounts for 36-56% of cases, followed by papillary (20-30%) and clear cell (6-23%). This differs markedly from adults, where clear cell RCC is predominant (~70%)."
-      },
-      quiz9: {
-        correct: "Correct! Anaplasia (both focal and diffuse) is associated with somatic TP53 mutations and predicts chemoresistance and poor prognosis, especially diffuse anaplasia in advanced stages.",
-        incorrect: "The answer is <strong>TP53</strong>. Diffuse anaplasia in Wilms tumor is characterized by TP53 mutations, which confer chemoresistance. WT1 is associated with WAGR/Denys-Drash syndromes. CTNNB1 is a Wnt pathway mutation. SMARCB1 is associated with rhabdoid tumor."
-      },
-      quiz10: {
-        correct: "Correct! COG recommends sampling a minimum of 5 lymph nodes from the renal hilum, pericaval, and para-aortic regions for accurate staging. Inadequate sampling may under-stage the tumor.",
-        incorrect: "The answer is <strong>5 nodes</strong>. Per COG/NCCN guidelines, a minimum of 5 lymph nodes should be sampled from the renal hilum, pericaval, and para-aortic regions. This is essential for accurate staging and treatment planning."
-      }
+      q1: { correct: "Correct! Healthy child + painless mass + claw sign + no calcification = Wilms tumor. Neuroblastoma kids are ill with 60-70% calcification. CMN is neonates. RCC is adolescents.", incorrect: "The answer is <strong>Wilms tumor</strong>. Key clues: healthy child (age 3), firm non-tender mass found incidentally, claw sign (intrarenal), no calcification. Neuroblastoma: ill-appearing, 60-70% calc. CMN: infants <3mo. RCC: adolescents 9-15yr." },
+      q2: { correct: "Correct! CMN is the #1 renal tumor in infants under 3 months. Median age 1 month. Wilms peaks at 1-5 years.", incorrect: "The answer is <strong>CMN</strong>. It's the most common renal tumor in infants <3 months (median 1 month). Wilms peaks at 1-5yr, CCSK at 2-4yr, RCC at 9-15yr." },
+      q3: { correct: "Correct! Q3 months until age 7 per NCCN. Rationale: 90-98% of syndromic WT occurs by age 7, leaving only ~1% residual risk.", incorrect: "The answer is <strong>every 3 months until age 7</strong>. Per NCCN v2.2025: physical exam + renal US Q3 months until age 7 for WAGR, Denys-Drash, BWS, and other high-risk syndromes." },
+      q4: { correct: "Correct! Biopsy before removal = automatic Stage III per COG, regardless of other findings. This is a classic board trap!", incorrect: "The answer is <strong>Stage III</strong>. Per COG: biopsy before removal automatically upgrades to Stage III. Other triggers: LN+, spillage, peritoneal implants, removed in >1 piece, positive margins." },
+      q5: { correct: "Correct! SIOP uses neoadjuvant chemo as standard (4wk localized, 6wk metastatic). COG does upfront surgery except for bilateral/unresectable/IVC thrombus.", incorrect: "The answer is <strong>SIOP</strong>. SIOP gives preoperative chemotherapy as standard protocol. COG does upfront surgery then risk-adapted chemo. Both achieve >90% survival for favorable histology." },
+      q6: { correct: "Correct! TP53 mutations are the hallmark of anaplasia, conferring chemoresistance. This explains why diffuse anaplasia has such poor outcomes.", incorrect: "The answer is <strong>TP53</strong>. TP53 mutations drive anaplastic histology and chemoresistance. WT1 = WAGR/Denys-Drash. CTNNB1 = Wnt pathway. SMARCB1 = rhabdoid tumor." },
+      q7: { correct: "Correct! General surgeon performing nephrectomy = OR 9.0 — the single highest risk factor, even above IVC extension (3.8) or flank incision (5.3).", incorrect: "The answer is <strong>general surgeon</strong> (OR 9.0). Higher than IVC thrombus (3.8), flank incision (5.3), or tumor ≥10cm (2.0). Wilms nephrectomy should be done by pediatric surgeons." },
+      q8: { correct: "Correct! CCSK is the 'bone-metastasizing renal tumor of childhood.' BCOR ITD in 85%. 23% develop bone mets to spine, pelvis, ribs. Always get a bone scan!", incorrect: "The answer is <strong>Clear cell sarcoma</strong>. Known as the 'bone-metastasizing renal tumor' with BCOR ITD in 85%. 23% get bone mets. Wilms rarely goes to bone. Always get a bone scan for CCSK." },
+      q9: { correct: "Correct! MiT-RCC (TFE3/TFEB) accounts for 36-56% of pediatric RCC — unlike adults where clear cell dominates at ~70%. A critical distinction!", incorrect: "The answer is <strong>MiT-RCC (translocation type)</strong>. In children: TFE3/TFEB fusions at 36-56%, papillary 20-30%, clear cell only 6-23%. Adults: clear cell ~70%. Completely different biology." },
+      q10: { correct: "Correct! Minimum 5 nodes from renal hilum, pericaval, and para-aortic regions per COG/NCCN. Inadequate sampling may under-stage the tumor.", incorrect: "The answer is <strong>5 nodes</strong>. Per COG/NCCN: minimum 5 lymph nodes from hilum, pericaval, and para-aortic regions for accurate staging." },
+      q11: { correct: "Correct! SMARCB1/INI1 loss at 22q11.2 is the hallmark of rhabdoid tumor. ~25% have synchronous AT/RT. Loss of INI1 staining on IHC is diagnostic.", incorrect: "The answer is <strong>SMARCB1/INI1 loss</strong>. ETV6-NTRK3 = cellular CMN. BCOR ITD = clear cell sarcoma. TFE3 = translocation RCC. SMARCB1 loss = rhabdoid tumor." },
+      q12: { correct: "Correct! Infant + renal mass + subcapsular fluid + brain mass = rhabdoid tumor with synchronous AT/RT. SMARCB1/INI1 loss drives both tumors. Brain MRI mandatory!", incorrect: "The answer is <strong>rhabdoid tumor with AT/RT</strong>. Key clues: infant <1yr, subcapsular fluid collection (characteristic of MRTK), synchronous brain mass (AT/RT in 25%). SMARCB1/INI1 loss confirmed in both." }
     };
 
     function checkAnswer(el, isCorrect, quizId) {
       if (answered[quizId]) return;
       answered[quizId] = true;
       totalAnswered++;
-
       const options = el.parentElement.querySelectorAll('.quiz-option');
-      options.forEach(opt => {
-        opt.style.pointerEvents = 'none';
-      });
-
+      options.forEach(opt => opt.style.pointerEvents = 'none');
       const feedback = document.getElementById(quizId + '-feedback');
-
       if (isCorrect) {
         score++;
         el.classList.add('correct');
@@ -2072,44 +862,21 @@
         feedback.innerHTML = '<i class="fas fa-check-circle"></i> ' + explanations[quizId].correct;
       } else {
         el.classList.add('incorrect');
-        // Highlight the correct answer
-        options.forEach(opt => {
-          if (opt.onclick.toString().includes('true')) {
-            opt.classList.add('correct');
-          }
-        });
+        options.forEach(opt => { if (opt.onclick && opt.onclick.toString().includes('true')) opt.classList.add('correct'); });
         feedback.className = 'quiz-feedback show incorrect-fb';
         feedback.innerHTML = '<i class="fas fa-times-circle"></i> ' + explanations[quizId].incorrect;
       }
-
-      // Update score tracker
       document.getElementById('quiz-score').textContent = score;
       document.getElementById('quiz-total').textContent = totalAnswered;
       document.getElementById('score-tracker').style.display = 'block';
-
-      // Update final score
       document.getElementById('final-correct').textContent = score;
-      document.getElementById('final-total').textContent = totalQuestions;
       const pct = (score / totalQuestions) * 100;
       document.getElementById('final-bar-fill').style.width = pct + '%';
-
       if (totalAnswered === totalQuestions) {
-        let msg = '';
-        if (pct >= 90) msg = 'Outstanding! You have mastered pediatric renal masses!';
-        else if (pct >= 70) msg = 'Great job! Review the topics you missed for a deeper understanding.';
-        else if (pct >= 50) msg = 'Good effort! Consider reviewing the key sections again.';
-        else msg = 'Keep studying! Review the presentation materials and try again.';
+        let msg = pct >= 90 ? 'Outstanding! You have mastered pediatric renal masses!' : pct >= 70 ? 'Great job! Review the topics you missed.' : pct >= 50 ? 'Good effort! Review the key sections again.' : 'Keep studying! Use this presentation as a reference.';
         document.getElementById('final-message').textContent = msg;
       }
     }
-
-    // Keyboard shortcut to toggle score
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 's' && !e.ctrlKey && !e.metaKey) {
-        const tracker = document.getElementById('score-tracker');
-        tracker.style.display = tracker.style.display === 'none' ? 'block' : 'none';
-      }
-    });
   </script>
 </body>
 </html>
